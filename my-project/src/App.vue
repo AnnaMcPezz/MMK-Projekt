@@ -8,16 +8,16 @@
         </div>
       </div>
       <div class="content-white">
-        <p><b>Hier Inhalt einfügen</b>
-        <br>und tolle Diagramme</p>
+        <p><b>Hier Inhalt einfügen / Schwangerschaftsabbrüche</b>
+        <br>und tolle Diagramme, Link Schwangerschaftsabrüche: https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Schwangerschaftsabbrueche/Tabellen/rechtliche-begruendung.html</p>
       </div>  
       <div class="content-grey">
-        <p><b>Hier Inhalt einfügen</b>
-        <br>und tolle Diagramme</p>
+        <p><b>Hier Inhalt einfügen / Entbindungen</b>
+        <br>und tolle Diagramme, Link Entbindungen: https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Krankenhaeuser/Tabellen/krankenhausentbindungen-kaiserschnitt.html</p>
       </div>
       <div class="content-white">
         <p><b>Hier Inhalt einfügen</b>
-        <br>und tolle Diagramme</p>
+        <br>und tolle Diagramme / zeiträume / Grafik</p>
       </div> 
       <div class="footer">
         <p>Ein Projekt von Grit Ludwig, Anne Westphal & Anna Tarrach</p>
