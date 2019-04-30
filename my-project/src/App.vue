@@ -22,6 +22,10 @@
     <div class="footer">
       <p>Ein Projekt von Grit Ludwig, Anne Westphal & Anna Tarrach</p>
     </div>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <h1>Unser tolles Projekt</h1>
+    <p>Moin Moin!</p>
   </div>
 
 </template>
