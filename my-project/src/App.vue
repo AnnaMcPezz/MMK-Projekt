@@ -6,26 +6,22 @@
         <div class="title-content">
           <p>Hier Text, Einleitung etc.</p>
         </div>
-    </div>
-    <div class="content-white">
-      <p><b>Hier Inhalt einfügen</b>
-      <br>und tolle Diagramme</p>
-    </div>  
-    <div class="content-grey">
-      <p><b>Hier Inhalt einfügen</b>
-      <br>und tolle Diagramme</p>
-    </div>
-    <div class="content-white">
-      <p><b>Hier Inhalt einfügen</b>
-      <br>und tolle Diagramme</p>
-    </div> 
-    <div class="footer">
-      <p>Ein Projekt von Grit Ludwig, Anne Westphal & Anna Tarrach</p>
-    </div>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <h1>Unser tolles Projekt</h1>
-    <p>Moin Moin!</p>
+      </div>
+      <div class="content-white">
+        <p><b>Hier Inhalt einfügen</b>
+        <br>und tolle Diagramme</p>
+      </div>  
+      <div class="content-grey">
+        <p><b>Hier Inhalt einfügen</b>
+        <br>und tolle Diagramme</p>
+      </div>
+      <div class="content-white">
+        <p><b>Hier Inhalt einfügen</b>
+        <br>und tolle Diagramme</p>
+      </div> 
+      <div class="footer">
+        <p>Ein Projekt von Grit Ludwig, Anne Westphal & Anna Tarrach</p>
+      </div>
   </div>
 
 </template>
@@ -40,6 +36,9 @@ export default {
 <style>
   html, body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .project {
+    color: rgb(26, 26, 26);
   }
   .title {
     text-align: center;
