@@ -81,7 +81,7 @@ export default {
       ],
       neuchartOptions: {
         title: "Company Performance",
-        backgroundColor: "black"
+        backgroundColor: "red"
       }
     };
   },
