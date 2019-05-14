@@ -10,22 +10,18 @@
     </div>
     <div class="content-white">
       <p>
-        <GChart type="ColumnChart" :data="chartData" :options="chartOptions"/>
+        <Chart1></Chart1>
 
         <b>Hier Inhalt einfügen / Schwangerschaftsabbrüche</b>
         <br>und tolle Diagramme, Link Schwangerschaftsabrüche: https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Schwangerschaftsabbrueche/Tabellen/rechtliche-begruendung.html
       </p>
     </div>
     <div class="content-grey">
-      <p>
-        <GChart type="ColumnChart" :data="neuchartData" :options="neuchartOptions"/>
-
-        <b>Hier Inhalt einfügen / Entbindungen</b>
-        <br>und tolle Diagramme, Link Entbindungen: https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Krankenhaeuser/Tabellen/krankenhausentbindungen-kaiserschnitt.html
-      </p>
+      
     </div>
     <div class="content-white">
       <p>
+        <Chart2></Chart2>
         <b>Hier Inhalt einfügen</b>
         <br>und tolle Diagramme / zeiträume / Grafik
       </p>
@@ -37,56 +33,21 @@
 </template>
 
 <script>
-import Vue from "vue";
-import VueGoogleCharts from "vue-google-charts";
+import Chart1 from "@/Chart1.vue"
+import Chart2 from "@/Chart2.vue"
 
-Vue.use(VueGoogleCharts);
 
-import { GChart } from "vue-google-charts";
 
 export default {
+  
   data() {
     return {
-      chartData: [
-        [
-          "Year",
-          "Sales",
-          "Expenses",
-          { role: "style" },
-          "Profit",
-          { role: "style" }
-        ],
-        ["2014", 200, 200, "black", 200, "black"],
-        ["2015", 200, 200, "black", 250, "black"],
-        ["2016", 200, 1120, "black", 300, "black"],
-        ["2017", 200, 540, "black", 350, "black"]
-      ],
-      chartOptions: {
-        title: "Company Performance",
-        backgroundColor: "white"
-      },
-      neuchartData: [
-        [
-          "Year",
-          "Sales",
-          "Expenses",
-          { role: "style" },
-          "Profit",
-          { role: "style" }
-        ],
-        ["2014", 200, 200, "black", 200, "black"],
-        ["2015", 200, 200, "black", 250, "black"],
-        ["2016", 200, 1120, "black", 300, "black"],
-        ["2017", 200, 540, "black", 350, "black"]
-      ],
-      neuchartOptions: {
-        title: "Company Performance",
-        backgroundColor: "red"
-      }
+    
     };
   },
   components: {
-    GChart
+    Chart1,
+    Chart2
   }
 };
 </script>
