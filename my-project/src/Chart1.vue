@@ -41,7 +41,8 @@ export default {
         backgroundColor: "white",
         animation:{
         duration: 1000,
-        startup: 'true'}
+        startup: 'true',
+        easing: 'out'}
         }
     }
 
