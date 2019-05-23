@@ -1,6 +1,10 @@
 <template>
     <p>
-        <GChart type="ColumnChart" :data="chartData" :options="chartOptions"/>
+        <GChart 
+        type="ColumnChart" 
+        :data="chartData" 
+        :options="chartOptions"
+       /> 
     </p>
 </template>
 
@@ -33,8 +37,11 @@ export default {
       ],
       chartOptions: {
         title: "Company Performance",
-        backgroundColor: "blue"
-      }
+        backgroundColor: "white",
+        animation:{
+        duration: 1000,
+        startup: 'true'}
+        }
 
     }
 

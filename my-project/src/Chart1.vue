@@ -1,6 +1,10 @@
 <template>
     <p>
-        <GChart type="ColumnChart" :data="chartData" :options="chartOptions"/>
+        <GChart 
+        type="LineChart" 
+        :data="chartData" 
+        :options="chartOptions"
+        />
     </p>
 </template>
 
@@ -24,7 +28,8 @@ export default {
           "Expenses",
           { role: "style" },
           "Profit",
-          { role: "style" }
+          { role: "style" },
+    
         ],
         ["2014", 200, 200, "black", 200, "black"],
         ["2015", 200, 200, "black", 250, "black"],
@@ -33,9 +38,11 @@ export default {
       ],
       chartOptions: {
         title: "Company Performance",
-        backgroundColor: "white"
-      }
-
+        backgroundColor: "white",
+        animation:{
+        duration: 1000,
+        startup: 'true'}
+        }
     }
 
     },
