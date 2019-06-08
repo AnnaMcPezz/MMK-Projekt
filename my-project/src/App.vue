@@ -94,7 +94,7 @@
       </div>
       <div class="row section-content">
         <div class="col-sm-6" id="PregnancyChart">
-          <Chart2 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart2>
+          <Chart2 v-bind:class="{active: pChartActive, inactive: pChartInactive }"></Chart2>
         </div>
         <div class="col-sm-6">
           <h2>What is going on in your Pregnancy?</h2>
@@ -145,13 +145,15 @@ export default {
   data() {
     return {
       chartInactive: true,
-      chartActive: false
+      chartActive: false,
+      pChartInactive: true,
+      pChartActive: false
     };
   },
   methods: {
     ShowChart() {
-      this.chartActive = true;
-      this.chartInactive = false;
+      this.pChartActive = true;
+      this.pChartInactive = false;
     },
     MoreChart() {
       this.chartActive = true;
