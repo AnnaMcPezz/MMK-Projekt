@@ -87,16 +87,16 @@
         </div>
       </div>
       <div id="MoreCharts">
-       <button id="MoreButton" @click="MoreCharts()">More Charts</button>
+       <button id="MoreButton" @click="MoreBirthCharts()">More Charts</button>
        </div>
       <div class="row section-content">
         <div class="col-sm-6">
-          <h4 v-bind:class="{active: chartActive, inactive: chartInactive }">Anzahl der Geburten von Mädchen und Jungen von 2011 - 2017</h4>
-          <Chart4 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart4>
+          <h4 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }">Anzahl der Geburten von Mädchen und Jungen von 2011 - 2017</h4>
+          <Chart4 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart4>
         </div>
         <div class="col-sm-6">
-          <h4 v-bind:class="{active: chartActive, inactive: chartInactive }">Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2017</h4>
-          <Chart5 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart5>
+          <h4 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }">Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2017</h4>
+          <Chart5 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart5>
         </div>
       </div>
     </div>
@@ -131,7 +131,7 @@
               <option value="5">...</option>
             </select>
           </p>
-          <button @click="ShowChart()">Show Chart</button>
+          <button id="MoreButton" @click="ShowChart()">Show Chart</button>
         </div>
       </div>
     </div>
@@ -164,7 +164,9 @@ export default {
       chartInactive: true,
       chartActive: false,
       pChartInactive: true,
-      pChartActive: false
+      pChartActive: false,
+      birthChartActive: false,
+      birthChartInactive: true
     };
   },
   methods: {
@@ -175,6 +177,10 @@ export default {
     MoreCharts() {
       this.chartActive = true;
       this.chartInactive = false;
+    },
+    MoreBirthCharts() {
+      this.birthChartActive = true;
+      this.birthChartInactive = false;
     }
   },
   components: {
