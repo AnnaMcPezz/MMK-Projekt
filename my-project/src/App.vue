@@ -69,12 +69,29 @@
         </div>
       </div>
       <div class="row section-content">
-        <div class="col-sm-6">
-          <Chart1></Chart1>
+        <div class="col-sm-6" id="PregnancyChart">
+          <Chart2 v-bind:class="{ active: chartActive, inactive: chartInactive }"></Chart2>
         </div>
         <div class="col-sm-6">
-          <h2>Lorem ipsum dolor sit amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h2>What is going on in your Pregnancy?
+          </h2>
+              <p> Gender: 
+              <select name="Gender" form="pregnancyForm">
+                <option value="unknown">unkown</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+               </select>
+            </p>
+            <p> Week of Pregnancy
+              <select name="Week of Pregnancy" form="pregnancyForm">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">...</option>
+              </select>
+            </p>
+              <button @click="ShowChart()">Show Chart</button>
         </div>
       </div>
     </div>
@@ -94,7 +111,16 @@ import Chart2 from "@/Chart2.vue";
 
 export default {
   data() {
-    return {};
+    return {
+      chartInactive: true,
+      chartActive: false
+    };
+  },
+  methods:{
+    ShowChart(){
+      this.chartActive = true; 
+      this.chartInactive = false; 
+    }
   },
   components: {
     Chart1,
@@ -200,5 +226,12 @@ h2 {
   color: rgb(100, 100, 100);
   text-align: center;
   padding-top: 20px;
+}
+
+.active {
+  display: block;
+}
+.inactive {
+  display: none; 
 }
 </style>
