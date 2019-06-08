@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#Abortions">Abtreibungen XXXX bis XXXX</a>
+              <a class="nav-link" href="#Abortions" style="color: rgb(0, 161, 151;">Abtreibungen XXXX bis XXXX</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#Births">Geburten blablaaa</a>
@@ -72,10 +72,10 @@
         <div class="col-sm-6">
           <Chart3></Chart3>
         </div>
-       </div>
-       <div id="MoreCharts">
-       <button @click="MoreChart()">More Charts</button>
-       </div>
+      </div>
+      <div id="MoreCharts">
+        <button @click="MoreChart()">More Charts</button>
+      </div>
       <div class="row section-content">
         <div class="col-sm-6">
           <Chart4 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart4>
@@ -97,25 +97,26 @@
           <Chart2 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart2>
         </div>
         <div class="col-sm-6">
-          <h2>What is going on in your Pregnancy?
-          </h2>
-              <p> Gender: 
-              <select name="Gender" form="pregnancyForm">
-                <option value="unknown">unkown</option>
-                <option value="male">male</option>
-                <option value="female">female</option>
-               </select>
-            </p>
-            <p> Week of Pregnancy
-              <select name="Week of Pregnancy" form="pregnancyForm">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">...</option>
-              </select>
-            </p>
-              <button @click="ShowChart()">Show Chart</button>
+          <h2>What is going on in your Pregnancy?</h2>
+          <p>
+            Gender:
+            <select name="Gender" form="pregnancyForm">
+              <option value="unknown">unkown</option>
+              <option value="male">male</option>
+              <option value="female">female</option>
+            </select>
+          </p>
+          <p>
+            Week of Pregnancy
+            <select name="Week of Pregnancy" form="pregnancyForm">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">...</option>
+            </select>
+          </p>
+          <button @click="ShowChart()">Show Chart</button>
         </div>
       </div>
     </div>
@@ -123,12 +124,13 @@
     <div class="container-fluid content footer">
       <div class="row">
         <div class="col-sm-12">
+          <button id="topButton" title="nach oben">
+            <a href="#" style="color: white; text-decoration: none;">Top</a>
+          </button>
           <p>A project by Grit Ludwig, Anne Westphal & Anna Tarrach</p>
         </div>
       </div>
     </div>
-    <button onclick="scrollToTop()" id="topButton" title="Go to top"><span class="glyphicon glyphicon-menu-up"></span>Top</button>
-
   </div>
 </template>
 
@@ -146,14 +148,14 @@ export default {
       chartActive: false
     };
   },
-  methods:{
-    ShowChart(){
-      this.chartActive = true; 
-      this.chartInactive = false; 
+  methods: {
+    ShowChart() {
+      this.chartActive = true;
+      this.chartInactive = false;
     },
-    MoreChart(){
-     this.chartActive = true; 
-     this.chartInactive = false; 
+    MoreChart() {
+      this.chartActive = true;
+      this.chartInactive = false;
     }
   },
   components: {
@@ -162,12 +164,12 @@ export default {
     Chart3,
     Chart4,
     Chart5
-
   }
 };
 
-
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+  scrollFunction();
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -176,12 +178,6 @@ function scrollFunction() {
     document.getElementById("topButton").style.display = "none";
   }
 }
-
-function scrollToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0; 
-}
-
 </script>
 
 <style>
@@ -267,31 +263,32 @@ h2 {
   display: block;
 }
 .inactive {
-  display: none; 
+  display: none;
 }
 
-#MoreCharts{
+#MoreCharts {
   text-align: center;
 }
 
 #topButton {
-  display: none;
+  text-decoration: none;
+  display: inline-block;
   position: fixed;
   bottom: 20px;
   right: 30px;
   z-index: 99;
   border: none;
   outline: none;
-  background-color: rgb(19, 216, 203); 
+  background-color: rgb(19, 216, 203);
   color: white;
-  cursor: pointer; 
+  cursor: pointer;
   padding: 10px;
-  border-radius: 5px; 
-  font-size: 18px; 
+  border-radius: 5px;
+  font-size: 18px;
 }
 
 #topButton:hover {
-  background-color: #555; 
+  background-color: #555;
 }
 </style>
 
