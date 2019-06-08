@@ -70,7 +70,7 @@
       </div>
       <div class="row section-content">
         <div class="col-sm-6" id="PregnancyChart">
-          <Chart2 v-bind:class="{ active: chartActive, inactive: chartInactive }"></Chart2>
+          <Chart2 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart2>
         </div>
         <div class="col-sm-6">
           <h2>What is going on in your Pregnancy?
