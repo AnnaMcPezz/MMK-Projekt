@@ -56,6 +56,19 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
       </div>
+      <div id="MoreCharts">
+       <button id="MoreButton" @click="MoreCharts()">More Charts</button>
+       </div>
+      <div class="row section-content">
+        <div class="col-sm-6">
+           <h4 v-bind:class="{active: chartActive, inactive: chartInactive }">Schwangerschaftsabbrüche nach Dauer der Schwangerschaft von 2018</h4>
+          <Chart6 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart6>
+        </div>
+        <div class="col-sm-6">
+          <h4 v-bind:class="{active: chartActive, inactive: chartInactive }">Schwangerschaftsabrüche nach rechtlicher Begründung von 2011 - 2018</h4>
+          <Chart7 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart7>
+        </div>
+      </div>
     </div>
     <div id="Births" class="container-fluid content grey">
       <div class="row">
@@ -74,13 +87,15 @@
         </div>
       </div>
       <div id="MoreCharts">
-        <button @click="MoreChart()">More Charts</button>
-      </div>
+       <button id="MoreButton" @click="MoreCharts()">More Charts</button>
+       </div>
       <div class="row section-content">
         <div class="col-sm-6">
+          <h4 v-bind:class="{active: chartActive, inactive: chartInactive }">Anzahl der Geburten von Mädchen und Jungen von 2011 - 2017</h4>
           <Chart4 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart4>
         </div>
         <div class="col-sm-6">
+          <h4 v-bind:class="{active: chartActive, inactive: chartInactive }">Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2017</h4>
           <Chart5 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart5>
         </div>
       </div>
@@ -140,6 +155,8 @@ import Chart2 from "@/Chart2.vue";
 import Chart3 from "@/Chart3.vue";
 import Chart4 from "@/Chart4.vue";
 import Chart5 from "@/Chart5.vue";
+import Chart6 from "@/Chart6.vue";
+import Chart7 from "@/Chart7.vue";
 
 export default {
   data() {
@@ -155,7 +172,7 @@ export default {
       this.pChartActive = true;
       this.pChartInactive = false;
     },
-    MoreChart() {
+    MoreCharts() {
       this.chartActive = true;
       this.chartInactive = false;
     }
@@ -165,7 +182,9 @@ export default {
     Chart2,
     Chart3,
     Chart4,
-    Chart5
+    Chart5,
+    Chart6,
+    Chart7
   }
 };
 
@@ -230,6 +249,12 @@ h2 {
   margin-bottom: 15px;
 }
 
+h4 {
+  font-size: 10pt;
+  font-weight: 300;
+  color: rgb(100, 100, 100);
+}
+
 .project {
   position: relative;
 }
@@ -268,8 +293,18 @@ h2 {
   display: none;
 }
 
-#MoreCharts {
+#MoreCharts{
   text-align: center;
+}
+
+#MoreButton {
+  border: none;
+  background-color: rgb(19, 216, 203);
+  border-radius: 5px; 
+  font-size: 18px;
+  color: white;
+  height: 35px;
+  width: 135px;
 }
 
 #topButton {
