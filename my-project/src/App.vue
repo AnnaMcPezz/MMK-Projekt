@@ -8,22 +8,35 @@
     </div>
 
     <div class="bg-img">
-      <div class="nav-menu">
-        <ul id="container-nav">
-          <li>
-            <a href="#Abortions">Abortions</a>
-          </li>
-          <li>
-            <a href="#Births">Births</a>
-          </li>
-          <li>
-            <a href="#Interactive">Interactive form</a>
-          </li>
-        </ul>
-      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#Abortions">Abtreibungen XXXX bis XXXX</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Births">Geburten blablaaa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Interactive">Interaktive Grfafik blaa</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <div class="header-text">
         <h1 style="color: #fff; font-size:40pt">Titel, Slogan</h1>
-          <p style="font-size: 20pt; font-weight: 200">kurzer Text</p>
+        <p style="font-size: 20pt; font-weight: 200">kurzer Text</p>
       </div>
     </div>
 
@@ -95,6 +108,7 @@
         </div>
       </div>
     </div>
+
     <div class="container-fluid content footer">
       <div class="row">
         <div class="col-sm-12">
@@ -102,6 +116,8 @@
         </div>
       </div>
     </div>
+    <button onclick="scrollToTop()" id="topButton" title="Go to top"><span class="glyphicon glyphicon-menu-up"></span>Top</button>
+
   </div>
 </template>
 
@@ -127,6 +143,23 @@ export default {
     Chart2
   }
 };
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("topButton").style.display = "block";
+  } else {
+    document.getElementById("topButton").style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+}
+
 </script>
 
 <style>
@@ -161,26 +194,6 @@ body {
   background-position: center;
   background-size: cover;
   position: relative;
-}
-.nav-menu {
-  text-align: center;
-  position: relative;
-}
-ul#container-nav li {
-  display: inline-block;
-  margin-left: 35px;
-  text-decoration: none;
-  padding: 30px 16px;
-  font-size: 14px;
-}
-
-.nav-menu a {
-  color: #fff;
-}
-
-.nav-menu a:hover {
-  color: rgb(32, 243, 155);
-  text-decoration: none;
 }
 
 h1 {
@@ -234,4 +247,25 @@ h2 {
 .inactive {
   display: none; 
 }
+
+#topButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgb(19, 216, 203); 
+  color: white;
+  cursor: pointer; 
+  padding: 10px;
+  border-radius: 5px; 
+  font-size: 18px; 
+}
+
+#topButton:hover {
+  background-color: #555; 
+}
 </style>
+
