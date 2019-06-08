@@ -1,7 +1,7 @@
 <template>
     <p>
         <GChart 
-        type="ColumnChart" 
+        type="PieChart" 
         :data="chartData" 
         :options="chartOptions"
         />
@@ -18,22 +18,17 @@ Vue.use(VueGoogleCharts);
 import { GChart } from "vue-google-charts";
 
 export default {
-    name: "Chart4",
+    name: "Chart6",
     data(){
     return{
     chartData: [
         [
-          "Jahr",
-          "Mädchen",
-          "Jungen"
+          "Schwangerschaftswoche",
+          "Anzahl"
         ],
-        ["2011", 322786, 339899],
-        ["2012", 327915, 345629],
-        ["2013", 332249, 349820],
-        ["2014", 348092, 366835],
-        ["2015", 359097, 378478],
-        ["2016", 386546, 405585],
-        ["2017", 382374, 402510]       
+        ["unter 12", 98168],
+        ["12 bis 21", 2163],
+        ["22 und mehr", 655]     
 
       ],
       chartOptions: {
@@ -41,12 +36,14 @@ export default {
                 position: 'bottom',
                 alignment: 'center'
               },
-        backgroundColor: "#FAFAFA",
+        backgroundColor: "white",
         bars: 'vertical',
-        series: {
-          0:{color: '#B404AE', visibleInLegend: true},
-          1:{color: '#04B4AE', visibleInLegend: true}
+        slices: {
+          0:{color: '#B404AE'},
+          1:{color: '#04B4AE', offset: 0.3},
+          2:{color: '#0B615E', offset: 0.5}
           },
+        pieSliceText: 'none',
         animation:{
         duration: 1000,
         startup: 'true',

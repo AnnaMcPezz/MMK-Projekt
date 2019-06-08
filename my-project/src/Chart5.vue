@@ -36,13 +36,39 @@ export default {
 
       ],
       chartOptions: {
-        title: "Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2018",
         pieHole: 0.3,
         backgroundColor: "#FAFAFA",
         animation:{
         duration: 1000,
         startup: 'true',
-        easing: 'out'}
+        easing: 'out'},
+        pieSliceText: 'none',
+        legend: {
+            position: 'bottom'
+              },
+        slices: {
+                0: {
+                  color: '#0B615E'
+                },
+                1: {
+                  color: '#088A85'
+                },
+                2: {
+                  color: '#04B4AE'
+                },
+                3: {
+                  color: '#01DFD7'
+                },
+                4: {
+                  color: '#A901DB'
+                },
+                5: {
+                  color: '#8904B1'
+                },
+                6: {
+                  color: '#6A0888'
+                }
+              }
         }
     }
 

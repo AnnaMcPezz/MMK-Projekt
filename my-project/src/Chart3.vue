@@ -41,11 +41,19 @@ export default {
         animation:{
         duration: 1000,
         startup: 'true',
-        easing: 'out'}
+        easing: 'out'},
+        series:{
+          0:{
+               color: "#DF01D7"
+             }
+        },
+        legend: {
+          position: 'bottom'
         }
     }
-
+    }
     },
+
     components: {
     GChart
   }

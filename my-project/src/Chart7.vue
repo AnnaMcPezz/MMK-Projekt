@@ -1,7 +1,7 @@
 <template>
     <p>
         <GChart 
-        type="ColumnChart" 
+        type="LineChart" 
         :data="chartData" 
         :options="chartOptions"
         />
@@ -18,22 +18,24 @@ Vue.use(VueGoogleCharts);
 import { GChart } from "vue-google-charts";
 
 export default {
-    name: "Chart4",
+    name: "Chart7",
     data(){
     return{
     chartData: [
         [
           "Jahr",
-          "Mädchen",
-          "Jungen"
+          "Medizinische Indikation",
+          "Kriminologische Indikation",
+          "Beratungsregelung"
         ],
-        ["2011", 322786, 339899],
-        ["2012", 327915, 345629],
-        ["2013", 332249, 349820],
-        ["2014", 348092, 366835],
-        ["2015", 359097, 378478],
-        ["2016", 386546, 405585],
-        ["2017", 382374, 402510]       
+        ["2011", 3485, 25, 105357],
+        ["2012", 3326, 27, 103462],
+        ["2013", 3703, 20, 99079],
+        ["2014", 3594, 41, 96080],
+        ["2015", 3879, 20, 95338],
+        ["2016", 3785, 28, 94908],
+        ["2017", 3911, 20, 97278], 
+        ["2018", 3815, 20, 97151]      
 
       ],
       chartOptions: {
@@ -41,11 +43,11 @@ export default {
                 position: 'bottom',
                 alignment: 'center'
               },
-        backgroundColor: "#FAFAFA",
-        bars: 'vertical',
+        backgroundColor: "white",
         series: {
-          0:{color: '#B404AE', visibleInLegend: true},
-          1:{color: '#04B4AE', visibleInLegend: true}
+          0:{color: '#B404AE'},
+          1:{color: '#04B4AE'},
+          2:{color: '#01DFD7'}
           },
         animation:{
         duration: 1000,

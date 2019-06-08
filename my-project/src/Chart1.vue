@@ -42,7 +42,14 @@ export default {
         animation:{
         duration: 1000,
         startup: 'true',
-        easing: 'out'}
+        easing: 'out'},
+        series: {
+          0:{color: '#04B4AE'}
+          },
+        legend: {
+          position: 'bottom',
+          alignment: 'center'
+          },
         }
     }
 
