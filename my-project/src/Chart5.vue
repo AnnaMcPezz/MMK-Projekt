@@ -1,7 +1,7 @@
 <template>
     <p>
         <GChart 
-        type="LineChart" 
+        type="PieChart" 
         :data="chartData" 
         :options="chartOptions"
         />
@@ -18,27 +18,27 @@ Vue.use(VueGoogleCharts);
 import { GChart } from "vue-google-charts";
 
 export default {
-    name: "Chart1",
+    name: "Chart5",
     data(){
     return{
     chartData: [
         [
           "Jahr",
-          "Abtreibungen"
+          "Kaiserschnitt"
         ],
-        ["2011", 107858],
-        ["2012", 105727],
-        ["2013", 101710],
-        ["2014", 98464],
-        ["2015", 98126],
-        ["2016", 97772],
-        ["2017", 100145],
-        ["2018", 99905]
+        ["2011",  206791],
+        ["2012",  208254],
+        ["2013",  210570],
+        ["2014",  220540],
+        ["2015",  222919],
+        ["2016",  232479],
+        ["2017",  232505]       
 
       ],
       chartOptions: {
-        title: "Anzahl der Abtreibungen in Deutschland 2011 - 2018",
-        backgroundColor: "white",
+        title: "Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2018",
+        pieHole: 0.3,
+        backgroundColor: "#FAFAFA",
         animation:{
         duration: 1000,
         startup: 'true',

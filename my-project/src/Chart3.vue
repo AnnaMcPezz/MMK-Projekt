@@ -18,27 +18,26 @@ Vue.use(VueGoogleCharts);
 import { GChart } from "vue-google-charts";
 
 export default {
-    name: "Chart1",
+    name: "Chart3",
     data(){
     return{
     chartData: [
         [
           "Jahr",
-          "Abtreibungen"
+          "Geburten"
         ],
-        ["2011", 107858],
-        ["2012", 105727],
-        ["2013", 101710],
-        ["2014", 98464],
-        ["2015", 98126],
-        ["2016", 97772],
-        ["2017", 100145],
-        ["2018", 99905]
+        ["2011", 662685],
+        ["2012", 673544],
+        ["2013", 682069],
+        ["2014", 714927],
+        ["2015", 737575],
+        ["2016", 792141],
+        ["2017", 784901]
 
       ],
       chartOptions: {
-        title: "Anzahl der Abtreibungen in Deutschland 2011 - 2018",
-        backgroundColor: "white",
+        title: "Anzahl der Geburten in Deutschland von 2011 - 2017",
+        backgroundColor: "#FAFAFA",
         animation:{
         duration: 1000,
         startup: 'true',

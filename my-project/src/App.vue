@@ -70,7 +70,18 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <div class="col-sm-6">
-          <Chart1></Chart1>
+          <Chart3></Chart3>
+        </div>
+       </div>
+       <div id="MoreCharts">
+       <button @click="MoreChart()">More Charts</button>
+       </div>
+      <div class="row section-content">
+        <div class="col-sm-6">
+          <Chart4 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart4>
+        </div>
+        <div class="col-sm-6">
+          <Chart5 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart5>
         </div>
       </div>
     </div>
@@ -124,6 +135,9 @@
 <script>
 import Chart1 from "@/Chart1.vue";
 import Chart2 from "@/Chart2.vue";
+import Chart3 from "@/Chart3.vue";
+import Chart4 from "@/Chart4.vue";
+import Chart5 from "@/Chart5.vue";
 
 export default {
   data() {
@@ -136,11 +150,19 @@ export default {
     ShowChart(){
       this.chartActive = true; 
       this.chartInactive = false; 
+    },
+    MoreChart(){
+     this.chartActive = true; 
+     this.chartInactive = false; 
     }
   },
   components: {
     Chart1,
-    Chart2
+    Chart2,
+    Chart3,
+    Chart4,
+    Chart5
+
   }
 };
 
@@ -246,6 +268,10 @@ h2 {
 }
 .inactive {
   display: none; 
+}
+
+#MoreCharts{
+  text-align: center;
 }
 
 #topButton {

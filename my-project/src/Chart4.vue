@@ -1,7 +1,7 @@
 <template>
     <p>
         <GChart 
-        type="LineChart" 
+        type="BarChart" 
         :data="chartData" 
         :options="chartOptions"
         />
@@ -18,27 +18,27 @@ Vue.use(VueGoogleCharts);
 import { GChart } from "vue-google-charts";
 
 export default {
-    name: "Chart1",
+    name: "Chart4",
     data(){
     return{
     chartData: [
         [
           "Jahr",
-          "Abtreibungen"
+          "Mädchen",
+          "Jungen"
         ],
-        ["2011", 107858],
-        ["2012", 105727],
-        ["2013", 101710],
-        ["2014", 98464],
-        ["2015", 98126],
-        ["2016", 97772],
-        ["2017", 100145],
-        ["2018", 99905]
+        ["2011", 322786, 339899],
+        ["2012", 327915, 345629],
+        ["2013", 332249, 349820],
+        ["2014", 348092, 366835],
+        ["2015", 359097, 378478],
+        ["2016", 386546, 405585],
+        ["2017", 382374, 402510]       
 
       ],
       chartOptions: {
-        title: "Anzahl der Abtreibungen in Deutschland 2011 - 2018",
-        backgroundColor: "white",
+        title: "Anzahl der Geburten von Mädchen & Jungen von 2011 - 2018",
+        backgroundColor: "#FAFAFA",
         animation:{
         duration: 1000,
         startup: 'true',
