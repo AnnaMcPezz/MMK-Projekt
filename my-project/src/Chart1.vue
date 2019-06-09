@@ -37,7 +37,6 @@ export default {
 
       ],
       chartOptions: {
-        title: "Anzahl der Abtreibungen in Deutschland 2011 - 2018",
         backgroundColor: "white",
         animation:{
         duration: 1000,

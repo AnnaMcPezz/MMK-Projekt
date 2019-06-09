@@ -49,6 +49,7 @@
       </div>
       <div class="row section-content">
         <div class="col-sm-6">
+          <h6> Anzahl der Abtreibungen in Deutschland 2011 - 2018 </h6>
           <Chart1></Chart1>
         </div>
         <div class="col-sm-6">
@@ -61,11 +62,11 @@
        </div>
       <div class="row section-content">
         <div class="col-sm-6">
-           <h4 v-bind:class="{active: chartActive, inactive: chartInactive }">Schwangerschaftsabbrüche nach Dauer der Schwangerschaft von 2018</h4>
+           <h6 v-bind:class="{active: chartActive, inactive: chartInactive }">Schwangerschaftsabbrüche nach Dauer der Schwangerschaft von 2018</h6>
           <Chart6 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart6>
         </div>
         <div class="col-sm-6">
-          <h4 v-bind:class="{active: chartActive, inactive: chartInactive }">Schwangerschaftsabrüche nach rechtlicher Begründung von 2011 - 2018</h4>
+          <h6 v-bind:class="{active: chartActive, inactive: chartInactive }">Schwangerschaftsabrüche nach rechtlicher Begründung von 2011 - 2018</h6>
           <Chart7 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart7>
         </div>
       </div>
@@ -83,6 +84,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <div class="col-sm-6">
+          <h6> Anzahl der Geburten in Deutschland von 2011 - 2017 </h6>
           <Chart3></Chart3>
         </div>
       </div>
@@ -91,11 +93,11 @@
        </div>
       <div class="row section-content">
         <div class="col-sm-6">
-          <h4 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }">Anzahl der Geburten von Mädchen und Jungen von 2011 - 2017</h4>
+          <h6 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }">Anzahl der Geburten von Mädchen und Jungen von 2011 - 2017</h6>
           <Chart4 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart4>
         </div>
         <div class="col-sm-6">
-          <h4 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }">Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2017</h4>
+          <h6 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }">Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2017</h6>
           <Chart5 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart5>
         </div>
       </div>
@@ -255,9 +257,10 @@ h2 {
   margin-bottom: 15px;
 }
 
-h4 {
-  font-size: 10pt;
+h6 {
+  font-size: 8pt;
   font-weight: 300;
+  text-align: center;
   color: rgb(100, 100, 100);
 }
 

@@ -36,7 +36,6 @@ export default {
 
       ],
       chartOptions: {
-        title: "Anzahl der Geburten in Deutschland von 2011 - 2017",
         backgroundColor: "#FAFAFA",
         animation:{
         duration: 1000,
