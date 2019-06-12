@@ -1,14 +1,8 @@
 
 <template>
   <div>
-    <div class="container-fluid header">
-      <div class="row">
-        <div class="col-sm-12"></div>
-      </div>
-    </div>
-
     <div class="bg-img">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark">
         <button
           class="navbar-toggler"
           type="button"
@@ -22,21 +16,54 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#Abortions" style="color: rgb(0, 161, 151;">Abtreibungen XXXX bis XXXX</a>
+            <li class="nav">
+              <a href="#Abortions" style="text-decoration: none;">Abtreibungen XXXX bis XXXX</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Births">Geburten blablaaa</a>
+            <li class="nav">
+              <a href="#Births" style="text-decoration: none;">Geburten blablaaa</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Interactive">Interaktive Grfafik blaa</a>
+            <li class="nav">
+              <a href="#Interactive" style="text-decoration: none;">Interaktive Grafik blaa</a>
             </li>
           </ul>
         </div>
       </nav>
-      <div class="header-text">
-        <h1 style="color: #fff; font-size:40pt">Titel, Slogan</h1>
-        <p style="font-size: 20pt; font-weight: 200">kurzer Text</p>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="./assets/title.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./assets/title_2.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./assets/title_3.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
 
@@ -49,7 +76,7 @@
       </div>
       <div class="row section-content">
         <div class="col-sm-6">
-          <h6> Anzahl der Abtreibungen in Deutschland 2011 - 2018 </h6>
+          <h6>Anzahl der Abtreibungen in Deutschland 2011 - 2018</h6>
           <Chart1></Chart1>
         </div>
         <div class="col-sm-6">
@@ -58,15 +85,19 @@
         </div>
       </div>
       <div id="MoreCharts">
-       <button id="MoreButton" @click="MoreCharts()">More Charts</button>
-       </div>
+        <button id="MoreButton" @click="MoreCharts()">More Charts</button>
+      </div>
       <div class="row section-content">
         <div class="col-sm-6">
-           <h6 v-bind:class="{active: chartActive, inactive: chartInactive }">Schwangerschaftsabbrüche nach Dauer der Schwangerschaft von 2018</h6>
+          <h6
+            v-bind:class="{active: chartActive, inactive: chartInactive }"
+          >Schwangerschaftsabbrüche nach Dauer der Schwangerschaft von 2018</h6>
           <Chart6 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart6>
         </div>
         <div class="col-sm-6">
-          <h6 v-bind:class="{active: chartActive, inactive: chartInactive }">Schwangerschaftsabrüche nach rechtlicher Begründung von 2011 - 2018</h6>
+          <h6
+            v-bind:class="{active: chartActive, inactive: chartInactive }"
+          >Schwangerschaftsabrüche nach rechtlicher Begründung von 2011 - 2018</h6>
           <Chart7 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart7>
         </div>
       </div>
@@ -84,20 +115,24 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <div class="col-sm-6">
-          <h6> Anzahl der Geburten in Deutschland von 2011 - 2017 </h6>
+          <h6>Anzahl der Geburten in Deutschland von 2011 - 2017</h6>
           <Chart3></Chart3>
         </div>
       </div>
       <div id="MoreCharts">
-       <button id="MoreButton" @click="MoreBirthCharts()">More Charts</button>
-       </div>
+        <button id="MoreButton" @click="MoreBirthCharts()">More Charts</button>
+      </div>
       <div class="row section-content">
         <div class="col-sm-6">
-          <h6 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }">Anzahl der Geburten von Mädchen und Jungen von 2011 - 2017</h6>
+          <h6
+            v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"
+          >Anzahl der Geburten von Mädchen und Jungen von 2011 - 2017</h6>
           <Chart4 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart4>
         </div>
         <div class="col-sm-6">
-          <h6 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }">Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2017</h6>
+          <h6
+            v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"
+          >Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2017</h6>
           <Chart5 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart5>
         </div>
       </div>
@@ -109,12 +144,11 @@
           <span class="divider"></span>
         </div>
       </div>
-      <div class="row section-content">
-        <div class="col-sm-6" id="PregnancyChart">
-          <Chart2 v-bind:class="{active: pChartActive, inactive: pChartInactive }"></Chart2>
-        </div>
-        <div class="col-sm-6">
+      <div class="row section-content" style="text-align: center;">
+        <div class="col-sm-12" id="PregnancyChart">
           <h2>What is going on in your Pregnancy?</h2>
+          <p>  EinleitungEinleitungEinleitungEinleitungEinleitung
+            <br>EinleitungEinleitung Einleitung</p>
           <p>
             Gender:
             <select name="Gender" form="pregnancyForm">
@@ -134,6 +168,13 @@
             </select>
           </p>
           <button id="MoreButton" @click="ShowChart()">Show Chart</button>
+        </div>
+
+        <div class="col-sm-6" style="margin-top: 40px;">
+          <Chart2 v-bind:class="{active: pChartActive, inactive: pChartInactive }"></Chart2>
+        </div>
+        <div class="col-sm-6" style="margin-top: 40px;">
+          <Chart2 v-bind:class="{active: pChartActive, inactive: pChartInactive }"></Chart2>
         </div>
       </div>
     </div>
@@ -220,27 +261,20 @@ body {
   line-height: 18pt;
 }
 
-.image {
-  width: 100%;
+.nav {
+  font-size: 11pt;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.header {
-  padding: 0px;
-  position: absolute;
+.nav a {
+  color: white;
+  margin: auto;
 }
 
-.header-text {
-  color: #fff;
-  text-align: center;
-  padding-top: 300px;
-  font-size: 30pt;
-}
-.bg-img {
-  background-image: url("./assets/title.jpg");
-  min-height: 550px;
-  background-position: center;
-  background-size: cover;
-  position: relative;
+.nav a:hover {
+  color: rgb(19, 216, 203);
 }
 
 h1 {
@@ -302,14 +336,14 @@ h6 {
   display: none;
 }
 
-#MoreCharts{
+#MoreCharts {
   text-align: center;
 }
 
 #MoreButton {
   border: none;
   background-color: rgb(19, 216, 203);
-  border-radius: 5px; 
+  border-radius: 5px;
   font-size: 18px;
   color: white;
   height: 35px;
