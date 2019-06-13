@@ -137,6 +137,18 @@
         </div>
       </div>
     </div>
+
+    <div class="container-fluid content green">
+      <div class="col-sm-12 questionBox">
+        <h2>Bis zu welcher Schwangerschaftswoche glauben Sie, können Sie in D straffrei abtreiben?</h2>
+        <p></p>
+        <button id="qButton" value="1" @click="xxx()">4 Wochen</button>
+        <button id="qButton" value="1" @click="xxx()">7 Wochen</button>
+        <button id="qButton" value="2" @click="xxx()">12 Wochen</button>
+        <button id="qButton" value="1" @click="xxx()">15 Wochen</button>
+      </div>
+    </div>
+
     <div id="Interactive" class="container-fluid content">
       <div class="row">
         <div class="col-sm-12">
@@ -147,25 +159,32 @@
       <div class="row section-content" style="text-align: center;">
         <div class="col-sm-12" id="PregnancyChart">
           <h2>What is going on in your Pregnancy?</h2>
-          <p>  EinleitungEinleitungEinleitungEinleitungEinleitung
-            <br>EinleitungEinleitung Einleitung</p>
           <p>
-            Gender:
-            <select name="Gender" form="pregnancyForm">
+            EinleitungEinleitungEinleitungEinleitungEinleitung
+            <br>EinleitungEinleitung Einleitung
+          </p>
+          <p>
+            Erster Tag der Monatsblutung:
+            <select name="Monatsblutung" form="pregnancyForm">
               <option value="unknown">unkown</option>
               <option value="male">male</option>
               <option value="female">female</option>
             </select>
           </p>
           <p>
-            Week of Pregnancy
-            <select name="Week of Pregnancy" form="pregnancyForm">
+            Zykluslänge
+            <select name="Zykluslänge" form="pregnancyForm">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">...</option>
             </select>
+          </p>
+          <p>
+            Value:
+            <input type="range" min="0" step="10" max="100" v-model="value">
+            {{value}}
           </p>
           <button id="MoreButton" @click="ShowChart()">Show Chart</button>
         </div>
@@ -309,6 +328,18 @@ h6 {
   background-color: rgb(248, 249, 250);
 }
 
+.green {
+  background-color: rgb(19, 216, 203);
+}
+
+.questionBox {
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgb(66, 66, 66);
+}
+
 .content {
   padding-bottom: 50px;
   padding-top: 50px;
@@ -343,6 +374,60 @@ h6 {
 #MoreButton {
   border: none;
   background-color: rgb(19, 216, 203);
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  height: 35px;
+  width: 135px;
+}
+
+#qButton {
+  border: none;
+  background-color: rgb(19, 216, 203);
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  height: 35px;
+  width: 135px;
+  margin-right: 40px;
+}
+
+#ButtonWrong {
+  border: none;
+  background-color: rgb(235, 13, 13);
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  height: 35px;
+  width: 135px;
+  margin-right: 60px;
+}
+
+#ButtonRight {
+  border: none;
+  background-color: rgb(52, 216, 79);
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  height: 35px;
+  width: 135px;
+  margin-right: 60px;
+}
+
+#qButton:hover {
+  border: none;
+  background-color: rgb(13, 151, 142);
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  height: 35px;
+  width: 135px;
+  margin-right: 40px;
+}
+
+#MoreButton:hover {
+  border: none;
+  background-color: rgb(13, 151, 142);
   border-radius: 5px;
   font-size: 18px;
   color: white;
