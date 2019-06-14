@@ -140,12 +140,15 @@
 
     <div class="container-fluid content green">
       <div class="col-sm-12 questionBox">
-        <h2>Bis zu welcher Schwangerschaftswoche glauben Sie, können Sie in D straffrei abtreiben?</h2>
-        <p></p>
-        <button id="qButton" value="1" @click="xxx()">4 Wochen</button>
-        <button id="qButton" value="1" @click="xxx()">7 Wochen</button>
-        <button id="qButton" value="2" @click="xxx()">12 Wochen</button>
-        <button id="qButton" value="1" @click="xxx()">15 Wochen</button>
+        <h2>Wissen Sie's?</h2>
+        <p>
+          In Deutschland muss vor einem Schwangerschaftsabbruch eine Beratung in Anspruch genommen werden.
+          <br>Bis zu welcher Schwangerschaftswoche glauben Sie, können Sie straffrei abtreiben?
+        </p>
+        <button id="1" class="qButton" @click="answer1()">Innerhalb 4 Wochen</button>
+        <button id="2" class="qButton" @click="answer2()">Innerhalb 7 Wochen</button>
+        <button id="3" class="qButton" @click="answer3()">Innerhalb 12 Wochen</button>
+        <button id="4" class="qButton" @click="answer4()">Innerhalb 15 Wochen</button>
       </div>
     </div>
 
@@ -243,6 +246,22 @@ export default {
     MoreBirthCharts() {
       this.birthChartActive = true;
       this.birthChartInactive = false;
+    },
+    answer1() {
+      document.getElementById("1").style.backgroundColor = "red";
+      document.getElementById("1").innerHTML = "Leider falsch";
+    },
+    answer2() {
+      document.getElementById("2").style.backgroundColor = "red";
+      document.getElementById("2").innerHTML = "Leider falsch";
+    },
+    answer3() {
+      document.getElementById("3").style.backgroundColor = "green";
+      document.getElementById("3").innerHTML = "Richtig";
+    },
+    answer4() {
+      document.getElementById("4").style.backgroundColor = "red";
+      document.getElementById("4").innerHTML = "Leider falsch";
     }
   },
   components: {
@@ -381,14 +400,14 @@ h6 {
   width: 135px;
 }
 
-#qButton {
+.qButton {
   border: none;
   background-color: rgb(19, 216, 203);
   border-radius: 5px;
   font-size: 18px;
   color: white;
   height: 35px;
-  width: 135px;
+  width: 190px;
   margin-right: 40px;
 }
 
@@ -414,14 +433,14 @@ h6 {
   margin-right: 60px;
 }
 
-#qButton:hover {
+.qButton:hover {
   border: none;
   background-color: rgb(13, 151, 142);
   border-radius: 5px;
   font-size: 18px;
   color: white;
   height: 35px;
-  width: 135px;
+  width: 190px;
   margin-right: 40px;
 }
 
