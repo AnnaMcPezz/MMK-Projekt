@@ -17,13 +17,13 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav">
-              <a href="#Abortions" style="text-decoration: none;">Abtreibungen XXXX bis XXXX</a>
+              <a href="#Abortions" style="text-decoration: none;">Abtreibungen 2011 bis 2018</a>
             </li>
             <li class="nav">
-              <a href="#Births" style="text-decoration: none;">Geburten blablaaa</a>
+              <a href="#Births" style="text-decoration: none;">Geburten 2011 bis 2017</a>
             </li>
             <li class="nav">
-              <a href="#Interactive" style="text-decoration: none;">Interaktive Grafik blaa</a>
+              <a href="#Interactive" style="text-decoration: none;">Schwangerschaftsrechner</a>
             </li>
           </ul>
         </div>
@@ -70,7 +70,7 @@
     <div id="Abortions" class="container-fluid content">
       <div class="row">
         <div class="col-sm-12">
-          <h1>Abortions</h1>
+          <h1>Abtreibungen in Deutschland</h1>
           <span class="divider"></span>
         </div>
       </div>
@@ -105,7 +105,7 @@
     <div id="Births" class="container-fluid content grey">
       <div class="row">
         <div class="col-sm-12">
-          <h1>Births</h1>
+          <h1>Geburten in Deutschland</h1>
           <span class="divider"></span>
         </div>
       </div>
@@ -140,6 +140,7 @@
 
     <div class="container-fluid content green">
       <div class="col-sm-12 questionBox">
+        <img id="frage" src="./assets/Frage.png">
         <h2>Wissen Sie's?</h2>
         <p>
           In Deutschland muss vor einem Schwangerschaftsabbruch eine Beratung in Anspruch genommen werden.
@@ -155,17 +156,68 @@
     <div id="Interactive" class="container-fluid content">
       <div class="row">
         <div class="col-sm-12">
-          <h1>Interactive form</h1>
+          <h1>Schwangerschaftsrechner</h1>
           <span class="divider"></span>
         </div>
       </div>
       <div class="row section-content" style="text-align: center;">
-        <div class="col-sm-12" id="PregnancyChart">
+        <div class="col-sm-12">
           <h2>What is going on in your Pregnancy?</h2>
           <p>
             EinleitungEinleitungEinleitungEinleitungEinleitung
             <br>EinleitungEinleitung Einleitung
           </p>
+          <form class="row section-content" style="text-align: left;">
+            <div class="form-group col-sm-3"></div>
+
+            <div class="form-group col-sm-3">
+              <label for="exampleFormControlInput1">
+                <h6>Beginn Ihrer letzten Periode</h6>
+              </label>
+              <input class="form-control" type="text" placeholder="Datepicker/ Kalender">
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="exampleFormControlSelect1">
+                <h6>Ihre Zykluslänge</h6>
+              </label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+                <option>32</option>
+                <option>33</option>
+                <option>34</option>
+                <option>35</option>
+                <option>36</option>
+                <option>37</option>
+                <option>38</option>
+                <option>39</option>
+                <option>40</option>
+              </select>
+            </div>
+          </form>
+          <div>
+            <div class="col-sm-12">
+              <button id="StichtagButton" @click="ShowChart()">Stichtag berechnen</button>
+            </div>
+          </div>
+
+          <p></p>
+
+          <p>ALT:</p>
           <p>
             Erster Tag der Monatsblutung:
             <select name="Monatsblutung" form="pregnancyForm">
@@ -205,7 +257,8 @@
       <div class="row">
         <div class="col-sm-12">
           <button id="topButton" title="nach oben">
-            <a href="#" style="color: white; text-decoration: none;">Top</a>
+            <img src="./assets/Pfeil.png">
+            <a href="#" style="color: white; text-decoration: none;"></a>
           </button>
           <p>A project by Grit Ludwig, Anne Westphal & Anna Tarrach</p>
         </div>
@@ -248,19 +301,19 @@ export default {
       this.birthChartInactive = false;
     },
     answer1() {
-      document.getElementById("1").style.backgroundColor = "red";
+      document.getElementById("1").style.backgroundColor = "#b404ae";
       document.getElementById("1").innerHTML = "Leider falsch";
     },
     answer2() {
-      document.getElementById("2").style.backgroundColor = "red";
+      document.getElementById("2").style.backgroundColor = "#b404ae";
       document.getElementById("2").innerHTML = "Leider falsch";
     },
     answer3() {
-      document.getElementById("3").style.backgroundColor = "green";
+      document.getElementById("3").style.backgroundColor = "rgb(19, 216, 203)";
       document.getElementById("3").innerHTML = "Richtig";
     },
     answer4() {
-      document.getElementById("4").style.backgroundColor = "red";
+      document.getElementById("4").style.backgroundColor = "#b404ae";
       document.getElementById("4").innerHTML = "Leider falsch";
     }
   },
@@ -280,7 +333,10 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 150
+  ) {
     document.getElementById("topButton").style.display = "block";
   } else {
     document.getElementById("topButton").style.display = "none";
@@ -351,6 +407,10 @@ h6 {
   background-color: rgb(19, 216, 203);
 }
 
+#frage {
+  width: 15%;
+}
+
 .questionBox {
   background-color: white;
   padding: 30px;
@@ -400,7 +460,7 @@ h6 {
   width: 135px;
 }
 
-.qButton {
+#StichtagButton {
   border: none;
   background-color: rgb(19, 216, 203);
   border-radius: 5px;
@@ -408,34 +468,41 @@ h6 {
   color: white;
   height: 35px;
   width: 190px;
+}
+
+#StichtagButton:hover {
+  border: none;
+  background-color: rgb(13, 151, 142);
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  height: 35px;
+  width: 190px;
+}
+
+#MoreButton:focus {
+  outline: none;
+}
+
+.qButton {
+  border: none;
+  background-color: #343a40;
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  height: 35px;
+  width: 190px;
   margin-right: 40px;
+  margin-top: 10px;
 }
 
-#ButtonWrong {
-  border: none;
-  background-color: rgb(235, 13, 13);
-  border-radius: 5px;
-  font-size: 18px;
-  color: white;
-  height: 35px;
-  width: 135px;
-  margin-right: 60px;
-}
-
-#ButtonRight {
-  border: none;
-  background-color: rgb(52, 216, 79);
-  border-radius: 5px;
-  font-size: 18px;
-  color: white;
-  height: 35px;
-  width: 135px;
-  margin-right: 60px;
+.qButton:focus {
+  outline: none;
 }
 
 .qButton:hover {
   border: none;
-  background-color: rgb(13, 151, 142);
+  background-color: #b404ae;
   border-radius: 5px;
   font-size: 18px;
   color: white;
@@ -467,7 +534,7 @@ h6 {
   color: white;
   cursor: pointer;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 30px;
   font-size: 18px;
 }
 
