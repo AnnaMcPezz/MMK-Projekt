@@ -174,13 +174,13 @@
               <label for="exampleFormControlInput1">
                 <h6>Beginn Ihrer letzten Periode</h6>
               </label>
-              <input class="form-control" type="text" placeholder="Datepicker/ Kalender">
+              <input class="form-control" type="date" placeholder="Datepicker/ Kalender" v-model="Datum">
             </div>
             <div class="form-group col-sm-3">
               <label for="exampleFormControlSelect1">
                 <h6>Ihre Zykluslänge</h6>
               </label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="exampleFormControlSelect1" v-model="Zyklus" >
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -211,36 +211,12 @@
           </form>
           <div>
             <div class="col-sm-12">
-              <button id="StichtagButton" @click="ShowChart()">Stichtag berechnen</button>
+              <button id="StichtagButton" @click="CalculateBirth()">Stichtag berechnen</button>
+              <p>
+               <span>{{Termin}}</span>
+              </p>
             </div>
           </div>
-
-          <p></p>
-
-          <p>ALT:</p>
-          <p>
-            Erster Tag der Monatsblutung:
-            <select name="Monatsblutung" form="pregnancyForm">
-              <option value="unknown">unkown</option>
-              <option value="male">male</option>
-              <option value="female">female</option>
-            </select>
-          </p>
-          <p>
-            Zykluslänge
-            <select name="Zykluslänge" form="pregnancyForm">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">...</option>
-            </select>
-          </p>
-          <p>
-            Value:
-            <input type="range" min="0" step="10" max="100" v-model="value">
-            {{value}}
-          </p>
           <button id="MoreButton" @click="ShowChart()">Show Chart</button>
         </div>
 
@@ -284,7 +260,10 @@ export default {
       pChartInactive: true,
       pChartActive: false,
       birthChartActive: false,
-      birthChartInactive: true
+      birthChartInactive: true,
+      Datum: "",
+      Zyklus: "",
+      Termin: "",
     };
   },
   methods: {
@@ -299,6 +278,9 @@ export default {
     MoreBirthCharts() {
       this.birthChartActive = true;
       this.birthChartInactive = false;
+    },
+    CalculateBirth(){
+      this.Termin = (this.Datum.getDay() + 7)+(this.Datum.getMonth()-3)+(this.Datum.getYear()+1)+ (this.Zyklus - 28);
     },
     answer1() {
       document.getElementById("1").style.backgroundColor = "#b404ae";
