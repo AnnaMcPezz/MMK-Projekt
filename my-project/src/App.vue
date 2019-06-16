@@ -180,7 +180,7 @@
               <label for="exampleFormControlInput1">
                 <h6>Beginn Ihrer letzten Periode</h6>
               </label>
-              <input class="form-control" type="date" placeholder="Datepicker/ Kalender" v-model="Datum">
+              <input class="form-control" type="date" v-model="Datum">
             </div>
             <div class="form-group col-sm-3">
               <label for="exampleFormControlSelect1">
@@ -288,7 +288,7 @@ export default {
       this.birthChartInactive = false;
     },
     CalculateBirth(){
-      this.Termin = (this.Datum.getDay() + 7)+(this.Datum.getMonth()-3)+(this.Datum.getYear()+1)+ (this.Zyklus - 28);
+      this.Termin = this.Datum;
     },
     answer(answer) {
         if (answer == false){
