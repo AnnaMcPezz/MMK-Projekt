@@ -146,10 +146,10 @@
           In Deutschland muss vor einem Schwangerschaftsabbruch eine Beratung in Anspruch genommen werden.
           <br>Bis zu welcher Schwangerschaftswoche glauben Sie, können Sie straffrei abtreiben?
         </p>
-        <button id="1" class="qButton" @click="answer1()">Innerhalb 4 Wochen</button>
-        <button id="2" class="qButton" @click="answer2()">Innerhalb 7 Wochen</button>
-        <button id="3" class="qButton" @click="answer3()">Innerhalb 12 Wochen</button>
-        <button id="4" class="qButton" @click="answer4()">Innerhalb 15 Wochen</button>
+        <button id="1" class="qButton" @click="answer()">Innerhalb 4 Wochen</button>
+        <button id="2" class="qButton" @click="answer()">Innerhalb 7 Wochen</button>
+        <button id="3" class="qButton" @click="answer()">Innerhalb 12 Wochen</button>
+        <button id="4" class="qButton" @click="answer()">Innerhalb 15 Wochen</button>
       </div>
     </div>
 
@@ -282,21 +282,26 @@ export default {
     CalculateBirth(){
       this.Termin = (this.Datum.getDay() + 7)+(this.Datum.getMonth()-3)+(this.Datum.getYear()+1)+ (this.Zyklus - 28);
     },
-    answer1() {
-      document.getElementById("1").style.backgroundColor = "#b404ae";
-      document.getElementById("1").innerHTML = "Leider falsch";
-    },
-    answer2() {
-      document.getElementById("2").style.backgroundColor = "#b404ae";
-      document.getElementById("2").innerHTML = "Leider falsch";
-    },
-    answer3() {
-      document.getElementById("3").style.backgroundColor = "rgb(19, 216, 203)";
-      document.getElementById("3").innerHTML = "Richtig";
-    },
-    answer4() {
-      document.getElementById("4").style.backgroundColor = "#b404ae";
-      document.getElementById("4").innerHTML = "Leider falsch";
+    answer() {
+      switch (document.getElementById(x)){
+        case 1:
+          document.getElementById("1").style.backgroundColor = "#b404ae";
+          document.getElementById("1").innerHTML = "Leider falsch";
+        break;
+        case 2:
+          document.getElementById("2").style.backgroundColor = "#b404ae";
+          document.getElementById("2").innerHTML = "Leider falsch";
+        break;
+        case 3:
+          document.getElementById("3").style.backgroundColor = "#b404ae";
+          document.getElementById("3").innerHTML = "Leider falsch";
+        break;
+        case 4:
+          document.getElementById("4").style.backgroundColor = "#b404ae";
+          document.getElementById("4").innerHTML = "Leider falsch";
+        break;
+        
+      }
     }
   },
   components: {
