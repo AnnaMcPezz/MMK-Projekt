@@ -146,10 +146,16 @@
           In Deutschland muss vor einem Schwangerschaftsabbruch eine Beratung in Anspruch genommen werden.
           <br>Bis zu welcher Schwangerschaftswoche glauben Sie, können Sie straffrei abtreiben?
         </p>
-        <button id="1" class="qButton" @click="answer()">Innerhalb 4 Wochen</button>
-        <button id="2" class="qButton" @click="answer()">Innerhalb 7 Wochen</button>
-        <button id="3" class="qButton" @click="answer()">Innerhalb 12 Wochen</button>
-        <button id="4" class="qButton" @click="answer()">Innerhalb 15 Wochen</button>
+        <button id="1" class="qButton" @click="answer(false)" :disabled="wrongAnswer || rightAnswer == true">Innerhalb 4 Wochen</button>
+        <button id="2" class="qButton" @click="answer(false)" :disabled="wrongAnswer || rightAnswer == true">Innerhalb 7 Wochen</button>
+        <button id="RightAnswer" class="qButton" @click="answer(true)"  :disabled="wrongAnswer || rightAnswer == true">Innerhalb 12 Wochen</button>
+        <button id="4" class="qButton" @click="answer(false)" :disabled="wrongAnswer || rightAnswer == true">Innerhalb 15 Wochen</button>
+        <p v-if="wrongAnswer === true">
+          FALSCH
+        </p>
+        <p v-if="rightAnswer === true">
+          RICHTIG
+        </p>
       </div>
     </div>
 
@@ -255,6 +261,8 @@ import Chart7 from "@/Chart7.vue";
 export default {
   data() {
     return {
+      rightAnswer: false,
+      wrongAnswer: false,
       chartInactive: true,
       chartActive: false,
       pChartInactive: true,
@@ -282,27 +290,13 @@ export default {
     CalculateBirth(){
       this.Termin = (this.Datum.getDay() + 7)+(this.Datum.getMonth()-3)+(this.Datum.getYear()+1)+ (this.Zyklus - 28);
     },
-    answer() {
-      switch (document.getElementById(x)){
-        case 1:
-          document.getElementById("1").style.backgroundColor = "#b404ae";
-          document.getElementById("1").innerHTML = "Leider falsch";
-        break;
-        case 2:
-          document.getElementById("2").style.backgroundColor = "#b404ae";
-          document.getElementById("2").innerHTML = "Leider falsch";
-        break;
-        case 3:
-          document.getElementById("3").style.backgroundColor = "#b404ae";
-          document.getElementById("3").innerHTML = "Leider falsch";
-        break;
-        case 4:
-          document.getElementById("4").style.backgroundColor = "#b404ae";
-          document.getElementById("4").innerHTML = "Leider falsch";
-        break;
-        
-      }
-    }
+    answer(answer) {
+        if (answer == false){
+          this.wrongAnswer = true;
+        } else {
+            this.rightAnswer = true;
+        }
+     }
   },
   components: {
     Chart1,
@@ -527,6 +521,14 @@ h6 {
 
 #topButton:hover {
   background-color: #555;
+}
+
+button:disabled{
+  background-color:#b404ae;
+}
+
+#RightAnswer:disabled{
+  background-color: rgb(19, 216, 203);
 }
 </style>
 
