@@ -40,10 +40,10 @@
             <img class="d-block w-100" src="./assets/title.jpg" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="./assets/title_2.jpg" alt="Second slide">
+            <img class="d-block w-100" src="./assets/title1.jpg" alt="Second slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="./assets/title_3.jpg" alt="Third slide">
+            <img class="d-block w-100" src="./assets/title2.jpg" alt="Second slide">
           </div>
         </div>
         <a
@@ -84,21 +84,31 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
       </div>
+
       <div id="MoreCharts">
-        <button id="MoreButton" @click="MoreCharts()">More Charts</button>
+        <button
+          id="MoreButton"
+          data-toggle="collapse"
+          data-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          @click="MoreCharts()"
+        >Weitere Daten einblenden</button>
       </div>
-      <div class="row section-content">
-        <div class="col-sm-6">
-          <h6
-            v-bind:class="{active: chartActive, inactive: chartInactive }"
-          >Schwangerschaftsabbrüche nach Dauer der Schwangerschaft von 2018</h6>
-          <Chart6 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart6>
-        </div>
-        <div class="col-sm-6">
-          <h6
-            v-bind:class="{active: chartActive, inactive: chartInactive }"
-          >Schwangerschaftsabrüche nach rechtlicher Begründung von 2011 - 2018</h6>
-          <Chart7 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart7>
+      <div class="collapse" id="collapseExample">
+        <div class="row section-content">
+          <div class="col-sm-6">
+            <h6
+              v-bind:class="{active: chartActive, inactive: chartInactive }"
+            >Schwangerschaftsabbrüche nach Dauer der Schwangerschaft von 2018</h6>
+            <Chart6 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart6>
+          </div>
+          <div class="col-sm-6">
+            <h6
+              v-bind:class="{active: chartActive, inactive: chartInactive }"
+            >Schwangerschaftsabrüche nach rechtlicher Begründung von 2011 - 2018</h6>
+            <Chart7 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart7>
+          </div>
         </div>
       </div>
     </div>
@@ -119,21 +129,31 @@
           <Chart3></Chart3>
         </div>
       </div>
+
       <div id="MoreCharts">
-        <button id="MoreButton" @click="MoreBirthCharts()">More Charts</button>
+        <button
+          id="MoreButton"
+          data-toggle="collapse"
+          data-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          @click="MoreBirthCharts()"
+        >Weitere Daten einblenden</button>
       </div>
-      <div class="row section-content">
-        <div class="col-sm-6">
-          <h6
-            v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"
-          >Anzahl der Geburten von Mädchen und Jungen von 2011 - 2017</h6>
-          <Chart4 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart4>
-        </div>
-        <div class="col-sm-6">
-          <h6
-            v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"
-          >Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2017</h6>
-          <Chart5 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart5>
+      <div class="collapse" id="collapseExample">
+        <div class="row section-content">
+          <div class="col-sm-6">
+            <h6
+              v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"
+            >Anzahl der Geburten von Mädchen und Jungen von 2011 - 2017</h6>
+            <Chart4 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart4>
+          </div>
+          <div class="col-sm-6">
+            <h6
+              v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"
+            >Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2017</h6>
+            <Chart5 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart5>
+          </div>
         </div>
       </div>
     </div>
@@ -146,16 +166,58 @@
           In Deutschland muss vor einem Schwangerschaftsabbruch eine Beratung in Anspruch genommen werden.
           <br>Bis zu welcher Schwangerschaftswoche glauben Sie, können Sie straffrei abtreiben?
         </p>
-        <button id="1" class="qButton" @click="answer(false)" :disabled="wrongAnswer || rightAnswer == true">Innerhalb 4 Wochen</button>
-        <button id="2" class="qButton" @click="answer(false)" :disabled="wrongAnswer || rightAnswer == true">Innerhalb 7 Wochen</button>
-        <button id="RightAnswer" class="qButton" @click="answer(true)"  :disabled="wrongAnswer || rightAnswer == true">Innerhalb 12 Wochen</button>
-        <button id="4" class="qButton" @click="answer(false)" :disabled="wrongAnswer || rightAnswer == true">Innerhalb 15 Wochen</button>
-        <p v-if="wrongAnswer === true">
-          FALSCH
-        </p>
-        <p v-if="rightAnswer === true">
-          RICHTIG
-        </p>
+        <button
+          id="1"
+          class="qButton"
+          @click="answer(false)"
+          :disabled="wrongAnswer || rightAnswer == true"
+        >Innerhalb 4 Wochen</button>
+        <button
+          id="2"
+          class="qButton"
+          @click="answer(false)"
+          :disabled="wrongAnswer || rightAnswer == true"
+        >Innerhalb 7 Wochen</button>
+        <button
+          id="RightAnswer"
+          class="qButton"
+          @click="answer(true)"
+          :disabled="wrongAnswer || rightAnswer == true"
+        >Innerhalb 12 Wochen</button>
+        <button
+          id="4"
+          class="qButton"
+          @click="answer(false)"
+          :disabled="wrongAnswer || rightAnswer == true"
+        >Innerhalb 15 Wochen</button>
+        <p></p>
+        <div class="row section-content">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <p v-if="wrongAnswer === true">
+              <span style="color:rgb(100,100,100); font-weight: 600;">Diese Antwort ist falsch</span>
+              <br>
+              <br>In Deutschland bestehen die Regelungen zu Schwangerschaftsabbrüchen seit 1995 im § 218 StGB. Grundsätzlich sind
+              <b>Abtreibungen verboten</b> und werden mit bis zu drei Jahren Haft bestraft.
+              <br>
+              <br>Straffrei wird die Abtreibung erst, nachdem eine Beratung bei einer
+              <b>anerkannten Beratungsstelle</b> durchgeführt wurde und seit der Befruchtung nicht mehr als
+              <b>zwölf Wochen</b> vergangen sind. Straffrei ist der Abbruch auch, wenn eine
+              <b>medizinische oder kriminologische Indikation</b> vorliegt.
+            </p>
+            <p v-if="rightAnswer === true">
+              <span style="color:rgb(100,100,100); font-weight: 600;">Diese Antwort ist richtig</span>
+              <br>
+              <br>In Deutschland bestehen die Regelungen zu Schwangerschaftsabbrüchen seit 1995 im § 218 StGB. Grundsätzlich sind
+              <b>Abtreibungen verboten</b> und werden mit bis zu drei Jahren Haft bestraft.
+              <br>
+              <br>Straffrei wird die Abtreibung erst, nachdem eine Beratung bei einer
+              <b>anerkannten Beratungsstelle</b> durchgeführt wurde und seit der Befruchtung nicht mehr als
+              <b>zwölf Wochen</b> vergangen sind. Straffrei ist der Abbruch auch, wenn eine
+              <b>medizinische oder kriminologische Indikation</b> vorliegt.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -186,7 +248,7 @@
               <label for="exampleFormControlSelect1">
                 <h6>Ihre Zykluslänge</h6>
               </label>
-              <select class="form-control" id="exampleFormControlSelect1" v-model="Zyklus" >
+              <select class="form-control" id="exampleFormControlSelect1" v-model="Zyklus">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -219,18 +281,10 @@
             <div class="col-sm-12">
               <button id="StichtagButton" @click="CalculateBirth()">Stichtag berechnen</button>
               <p>
-               <span>{{Termin}}</span>
+                <span>{{Termin}}</span>
               </p>
             </div>
           </div>
-          <button id="MoreButton" @click="ShowChart()">Show Chart</button>
-        </div>
-
-        <div class="col-sm-6" style="margin-top: 40px;">
-          <Chart2 v-bind:class="{active: pChartActive, inactive: pChartInactive }"></Chart2>
-        </div>
-        <div class="col-sm-6" style="margin-top: 40px;">
-          <Chart2 v-bind:class="{active: pChartActive, inactive: pChartInactive }"></Chart2>
         </div>
       </div>
     </div>
@@ -239,8 +293,9 @@
       <div class="row">
         <div class="col-sm-12">
           <button id="topButton" title="nach oben">
-            <img src="./assets/Pfeil.png">
-            <a href="#" style="color: white; text-decoration: none;"></a>
+            <a href="#" style="color: white; text-decoration: none;">
+              <img src="./assets/Pfeil.png">
+            </a>
           </button>
           <p>A project by Grit Ludwig, Anne Westphal & Anna Tarrach</p>
         </div>
@@ -259,6 +314,11 @@ import Chart6 from "@/Chart6.vue";
 import Chart7 from "@/Chart7.vue";
 
 export default {
+  name: "app",
+  created() {
+    document.title = "Abtreibungen & Geburten in Deutschland";
+  },
+
   data() {
     return {
       rightAnswer: false,
@@ -271,7 +331,7 @@ export default {
       birthChartInactive: true,
       Datum: "",
       Zyklus: "",
-      Termin: "",
+      Termin: ""
     };
   },
   methods: {
@@ -287,16 +347,16 @@ export default {
       this.birthChartActive = true;
       this.birthChartInactive = false;
     },
-    CalculateBirth(){
+    CalculateBirth() {
       this.Termin = this.Datum;
     },
     answer(answer) {
-        if (answer == false){
-          this.wrongAnswer = true;
-        } else {
-            this.rightAnswer = true;
-        }
-     }
+      if (answer == false) {
+        this.wrongAnswer = true;
+      } else {
+        this.rightAnswer = true;
+      }
+    }
   },
   components: {
     Chart1,
@@ -314,10 +374,7 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 150
-  ) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("topButton").style.display = "block";
   } else {
     document.getElementById("topButton").style.display = "none";
@@ -438,7 +495,7 @@ h6 {
   font-size: 18px;
   color: white;
   height: 35px;
-  width: 135px;
+  width: 250px;
 }
 
 #StichtagButton {
@@ -499,7 +556,7 @@ h6 {
   font-size: 18px;
   color: white;
   height: 35px;
-  width: 135px;
+  width: 250px;
 }
 
 #topButton {
@@ -523,11 +580,11 @@ h6 {
   background-color: #555;
 }
 
-button:disabled{
-  background-color:#b404ae;
+button:disabled {
+  background-color: #b404ae;
 }
 
-#RightAnswer:disabled{
+#RightAnswer:disabled {
   background-color: rgb(19, 216, 203);
 }
 </style>
