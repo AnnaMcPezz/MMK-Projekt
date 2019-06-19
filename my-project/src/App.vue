@@ -230,7 +230,7 @@
       </div>
       <div class="row section-content" style="text-align: center;">
         <div class="col-sm-12">
-          <h2>What is going on in your Pregnancy?</h2>
+          <h2>Wann ist Ihr Geburtstermin?</h2>
           <p>
             EinleitungEinleitungEinleitungEinleitungEinleitung
             <br>EinleitungEinleitung Einleitung
@@ -281,7 +281,7 @@
             <div class="col-sm-12">
               <button id="StichtagButton" @click="CalculateBirth()">Stichtag berechnen</button>
               <p>
-                <span>{{Termin}}</span>
+                <span>{{Periode}} {{Geburtsttag}}{{Geburtsmonat}}, {{Geburtsjahr}}</span>
               </p>
             </div>
           </div>
@@ -331,7 +331,10 @@ export default {
       birthChartInactive: true,
       Datum: "",
       Zyklus: "",
-      Termin: ""
+      Periode: "",
+      Geburtsttag: "",
+      Geburtsmonat: "",
+      Geburtsjahr: "",
     };
   },
   methods: {
@@ -348,7 +351,11 @@ export default {
       this.birthChartInactive = false;
     },
     CalculateBirth() {
-      this.Termin = this.Datum;
+      this.Periode = new Date (this.Datum);
+      this.Geburtsttag = this.Periode.getDate() + 7 + 28;
+      this.Geburtsmonat = this.Periode.getMonth() - 3;
+      this.Geburtsjahr = this.Periode.getFullYear() + 1;
+
     },
     answer(answer) {
       if (answer == false) {
