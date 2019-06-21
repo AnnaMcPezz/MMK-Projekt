@@ -249,11 +249,6 @@
                 <h6>Ihre Zykluslänge</h6>
               </label>
               <select class="form-control" id="exampleFormControlSelect1" v-model="Zyklus">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
                 <option>21</option>
                 <option>22</option>
                 <option>23</option>
@@ -281,7 +276,8 @@
             <div class="col-sm-12">
               <button id="StichtagButton" @click="CalculateBirth()">Stichtag berechnen</button>
               <p>
-                <span>{{Periode}} {{Geburtsttag}}{{Geburtsmonat}}, {{Geburtsjahr}}</span>
+                <span>Ihr errechneter Geburtstermin ist am: {{Termin}} <br>
+                  Sie befinden sich in Schwangerschaftswoche {{Schwangerschaftswoche}}.</span>
               </p>
             </div>
           </div>
@@ -332,9 +328,11 @@ export default {
       Datum: "",
       Zyklus: "",
       Periode: "",
-      Geburtsttag: "",
-      Geburtsmonat: "",
-      Geburtsjahr: "",
+      PeriodeInSeconds: "",
+      Geburtstermin: "",
+      Termin: "",
+      Schwangerschaftswoche: "",
+      todayDate: ""
     };
   },
   methods: {
@@ -352,9 +350,12 @@ export default {
     },
     CalculateBirth() {
       this.Periode = new Date (this.Datum);
-      this.Geburtsttag = this.Periode.getDate() + 7 + 28;
-      this.Geburtsmonat = this.Periode.getMonth() - 3;
-      this.Geburtsjahr = this.Periode.getFullYear() + 1;
+      this.todayDate = new Date();
+      this.PeriodeInSeconds = this.Periode.getTime();
+      this.Geburtstermin = this.PeriodeInSeconds + 7*86400000 - 3*2628000000 + 31536000000 + (this.Zyklus-28)*86400000;
+      this.Termin = new Date(this.Geburtstermin);
+      this.Schwangerschaftswoche = Math.round((this.todayDate - this.PeriodeInSeconds)/604800000);
+
 
     },
     answer(answer) {
