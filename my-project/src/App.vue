@@ -29,7 +29,12 @@
         </div>
       </nav>
 
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:40px">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+        style="margin-top:40px"
+      >
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -80,18 +85,22 @@
           <Chart1></Chart1>
         </div>
         <div class="col-sm-6">
-          <p>Die Anzahl der Abtreibungen in Deutschland ist von 2011 an deutlich gesunken,
-            erst in den letzten zwei Jahren ist die Anzahl von Schwangerschaftsabbrüchen wieder 
-            etwas gestiegen. Die meisten Abbrüche werden dabei bis zur Beendigung der 11 Schwangerschaftswoche 
-            (SSW) vorgenommen. <br><br>
-            2018 haben 97.2 Prozent der Frauen unter der 12 SSW 
+          <p>
+            Die Anzahl der Abtreibungen in Deutschland ist von 2011 an deutlich gesunken,
+            erst in den letzten zwei Jahren ist die Anzahl von Schwangerschaftsabbrüchen wieder
+            etwas gestiegen. Die meisten Abbrüche werden dabei bis zur Beendigung der 11 Schwangerschaftswoche
+            (SSW) vorgenommen.
+            <br>
+            <br>2018 haben 97.2 Prozent der Frauen unter der 12 SSW
             einen Schwangerschaftsabbruch vorgenommen. Bei 2,1 Prozent der Frauen war die Schwangerschaft
-            schon von der 12. bis 21. SSW vorangeschreitet. Nur bei 0.6 Prozent der Frauen dauererte die Schwangerschaft 
-            schon mehr als 21 SSW an. <br><br>
-            Die meisten Schwangerschaftsabbrüche finden nach der Beratungsregelung statt, selten wird ein Abbruch 
-            durch medizinische oder kriminologische Indikationen durchgeführt. Zum Beispiel wurde 2018 
+            schon von der 12. bis 21. SSW vorangeschreitet. Nur bei 0.6 Prozent der Frauen dauererte die Schwangerschaft
+            schon mehr als 21 SSW an.
+            <br>
+            <br>Die meisten Schwangerschaftsabbrüche finden nach der Beratungsregelung statt, selten wird ein Abbruch
+            durch medizinische oder kriminologische Indikationen durchgeführt. Zum Beispiel wurde 2018
             97.151 Schwangerschaften durch die Beratungsregelung abgebrochen, 3.815 durch die medizinische
-            Indikation und 20 durch die kriminologische Indikation. <br>
+            Indikation und 20 durch die kriminologische Indikation.
+            <br>
           </p>
         </div>
       </div>
@@ -100,25 +109,20 @@
         <button
           id="MoreButton"
           data-toggle="collapse"
-          data-target="#collapseExample"
+          data-target="#Abbrueche"
           aria-expanded="false"
-          aria-controls="collapseExample"
-          @click="MoreCharts()"
+          aria-controls="Abbrueche"
         >Weitere Daten einblenden</button>
       </div>
-      <div class="collapse" id="collapseExample">
+      <div class="collapse" id="Abbrueche">
         <div class="row section-content">
           <div class="col-sm-6">
-            <h6
-              v-bind:class="{active: chartActive, inactive: chartInactive }"
-            >Schwangerschaftsabbrüche nach Dauer der Schwangerschaft von 2018</h6>
-            <Chart6 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart6>
+            <h6>Schwangerschaftsabbrüche nach Dauer der Schwangerschaft von 2018</h6>
+            <Chart6></Chart6>
           </div>
           <div class="col-sm-6">
-            <h6
-              v-bind:class="{active: chartActive, inactive: chartInactive }"
-            >Schwangerschaftsabrüche nach rechtlicher Begründung von 2011 - 2018</h6>
-            <Chart7 v-bind:class="{active: chartActive, inactive: chartInactive }"></Chart7>
+            <h6>Schwangerschaftsabrüche nach rechtlicher Begründung von 2011 - 2018</h6>
+            <Chart7></Chart7>
           </div>
         </div>
       </div>
@@ -133,12 +137,13 @@
       <div class="row section-content">
         <div class="col-sm-6">
           <p>
-            Die Anzahl der Geburten in Deutschland hat von 2011 bis 2016 
-             einen starken Anstieg vernommen. Von 2016 bis 2017 ist ein leichter Abfall der Geburten
-             in Deutschland zu verzeichnen. <br><br>
-             Die meisten Frauen bringen einen Jungen auf die Welt. Zum Beispiel kamen 2017 
-             402.510 Jungen und 382.374 Mädchen auf die Welt. Die meisten Babys werden dabei per Kaiserschnitt 
-             entbunden. 2017 brachten 232.505 Frauen ihre Babys durch einen Kaiserschnitt auf die Welt.
+            Die Anzahl der Geburten in Deutschland hat von 2011 bis 2016
+            einen starken Anstieg vernommen. Von 2016 bis 2017 ist ein leichter Abfall der Geburten
+            in Deutschland zu verzeichnen.
+            <br>
+            <br>Die meisten Frauen bringen einen Jungen auf die Welt. Zum Beispiel kamen 2017
+            402.510 Jungen und 382.374 Mädchen auf die Welt. Die meisten Babys werden dabei per Kaiserschnitt
+            entbunden. 2017 brachten 232.505 Frauen ihre Babys durch einen Kaiserschnitt auf die Welt.
           </p>
         </div>
         <div class="col-sm-6">
@@ -151,25 +156,20 @@
         <button
           id="MoreButton"
           data-toggle="collapse"
-          data-target="#collapseExample"
+          data-target="#GebEntb"
           aria-expanded="false"
-          aria-controls="collapseExample"
-          @click="MoreBirthCharts()"
+          aria-controls="GebEntb"
         >Weitere Daten einblenden</button>
       </div>
-      <div class="collapse" id="collapseExample">
+      <div class="collapse" id="GebEntb">
         <div class="row section-content">
           <div class="col-sm-6">
-            <h6
-              v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"
-            >Anzahl der Geburten von Mädchen und Jungen von 2011 - 2017</h6>
-            <Chart4 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart4>
+            <h6>Anzahl der Geburten von Mädchen und Jungen von 2011 - 2017</h6>
+            <Chart4></Chart4>
           </div>
           <div class="col-sm-6">
-            <h6
-              v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"
-            >Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2017</h6>
-            <Chart5 v-bind:class="{active: birthChartActive, inactive: birthChartInactive }"></Chart5>
+            <h6>Anzahl der Entbindungen durch Kaiserschnitt von 2011 - 2017</h6>
+            <Chart5></Chart5>
           </div>
         </div>
       </div>
@@ -178,7 +178,7 @@
     <div class="container-fluid content green">
       <div class="col-sm-12 questionBox">
         <img id="frage" src="./assets/Frage.png">
-        <h2>Wissen Sie's?</h2>
+        <h2>Weißt du's?</h2>
         <p>
           In Deutschland muss vor einem Schwangerschaftsabbruch eine Beratung in Anspruch genommen werden.
           <br>Bis zu welcher Schwangerschaftswoche glauben Sie, können Sie straffrei abtreiben?
@@ -258,13 +258,13 @@
 
             <div class="form-group col-sm-3">
               <label for="exampleFormControlInput1">
-                <h6>Beginn Ihrer letzten Periode</h6>
+                <h6>Beginn deiner letzten Periode</h6>
               </label>
               <input class="form-control" type="date" v-model="Datum">
             </div>
             <div class="form-group col-sm-3">
               <label for="exampleFormControlSelect1">
-                <h6>Ihre Zykluslänge</h6>
+                <h6>Deine Zykluslänge</h6>
               </label>
               <select class="form-control" id="exampleFormControlSelect1" v-model="Zyklus">
                 <option>21</option>
@@ -292,10 +292,17 @@
           </form>
           <div>
             <div class="col-sm-12">
-              <button id="StichtagButton" @click="CalculateBirth()">Stichtag berechnen</button><br><br>
+              <button id="StichtagButton" @click="CalculateBirth()">Stichtag berechnen</button>
+              <br>
+              <br>
               <p>
-                <span><b>Ihr errechneter Geburtstermin ist am:</b> {{Termin}} <br>
-                  <b>Sie befinden sich in Schwangerschaftswoche </b> {{Schwangerschaftswoche}}.</span>
+                <span>
+                  <b>Dein errechneter Geburtstermin ist am:</b>
+                  {{Termin}}
+                  <br>
+                  <b>Du befindest dich in Schwangerschaftswoche</b>
+                  {{Schwangerschaftswoche}}.
+                </span>
               </p>
             </div>
           </div>
@@ -337,12 +344,6 @@ export default {
     return {
       rightAnswer: false,
       wrongAnswer: false,
-      chartInactive: true,
-      chartActive: false,
-      pChartInactive: true,
-      pChartActive: false,
-      birthChartActive: false,
-      birthChartInactive: true,
       Datum: "",
       Zyklus: "",
       Periode: "",
@@ -358,23 +359,21 @@ export default {
       this.pChartActive = true;
       this.pChartInactive = false;
     },
-    MoreCharts() {
-      this.chartActive = true;
-      this.chartInactive = false;
-    },
-    MoreBirthCharts() {
-      this.birthChartActive = true;
-      this.birthChartInactive = false;
-    },
+
     CalculateBirth() {
-      this.Periode = new Date (this.Datum);
+      this.Periode = new Date(this.Datum);
       this.todayDate = new Date();
       this.PeriodeInSeconds = this.Periode.getTime();
-      this.Geburtstermin = this.PeriodeInSeconds + 7*86400000 - 3*2628000000 + 31536000000 + (this.Zyklus-28)*86400000;
+      this.Geburtstermin =
+        this.PeriodeInSeconds +
+        7 * 86400000 -
+        3 * 2628000000 +
+        31536000000 +
+        (this.Zyklus - 28) * 86400000;
       this.Termin = new Date(this.Geburtstermin);
-      this.Schwangerschaftswoche = Math.round((this.todayDate - this.PeriodeInSeconds)/604800000);
-
-
+      this.Schwangerschaftswoche = Math.round(
+        (this.todayDate - this.PeriodeInSeconds) / 604800000
+      );
     },
     answer(answer) {
       if (answer == false) {
@@ -618,4 +617,5 @@ button:disabled {
   background-color: rgb(19, 216, 203);
 }
 </style>
+
 
