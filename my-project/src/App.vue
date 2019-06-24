@@ -249,9 +249,9 @@
         <div class="col-sm-12">
           <h2>Wann ist Ihr Geburtstermin?</h2>
           <p>
-            Du bist schwanger und möchtest wissen wann dein Baby zur Welt kommt? Mit unserem Schwangerschaftsrechner
-            erfährst du ganz leicht wann der Geburtstermin ist und in welcher Schwangerschaftswoche 
-            du dich derzeit befindest.
+            Du bist schwanger und möchtest wissen wann dein Baby zur Welt kommt? 
+          <br> Mit unserem Schwangerschaftsrechner erfährst du ganz leicht wann der Geburtstermin ist und
+          <br> in welcher Schwangerschaftswoche du dich derzeit befindest.
           </p>
           <form class="row section-content" style="text-align: left;">
             <div class="form-group col-sm-3"></div>
@@ -292,10 +292,10 @@
           </form>
           <div>
             <div class="col-sm-12">
-              <button id="StichtagButton" @click="CalculateBirth()">Stichtag berechnen</button>
+              <button id="StichtagButton" @click="CalculateBirth()">Stichtag berechnen</button><br><br>
               <p>
-                <span>Ihr errechneter Geburtstermin ist am: {{Termin}} <br>
-                  Sie befinden sich in Schwangerschaftswoche {{Schwangerschaftswoche}}.</span>
+                <span><b>Ihr errechneter Geburtstermin ist am:</b> {{Termin}} <br>
+                  <b>Sie befinden sich in Schwangerschaftswoche </b> {{Schwangerschaftswoche}}.</span>
               </p>
             </div>
           </div>
