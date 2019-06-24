@@ -2,7 +2,7 @@
 <template>
   <div>
     <div class="bg-img">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <button
           class="navbar-toggler"
           type="button"
