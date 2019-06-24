@@ -80,8 +80,19 @@
           <Chart1></Chart1>
         </div>
         <div class="col-sm-6">
-          <h2>Lorem ipsum dolor sit amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Die Anzahl der Abtreibungen in Deutschland ist von 2011 an deutlich gesunken,
+            erst in den letzten zwei Jahren ist die Anzahl von Schwangerschaftsabbrüchen wieder 
+            etwas gestiegen. Die meisten Abbrüche werden dabei bis zur Beendigung der 11 Schwangerschaftswoche 
+            (SSW) vorgenommen. <br><br>
+            2018 haben 97.2 Prozent der Frauen unter der 12 SSW 
+            einen Schwangerschaftsabbruch vorgenommen. Bei 2,1 Prozent der Frauen war die Schwangerschaft
+            schon von der 12. bis 21. SSW vorangeschreitet. Nur bei 0.6 Prozent der Frauen dauererte die Schwangerschaft 
+            schon mehr als 21 SSW an. <br><br>
+            Die meisten Schwangerschaftsabbrüche finden nach der Beratungsregelung statt, selten wird ein Abbruch 
+            durch medizinische oder kriminologische Indikationen durchgeführt. Zum Beispiel wurde 2018 
+            97.151 Schwangerschaften durch die Beratungsregelung abgebrochen, 3.815 durch die medizinische
+            Indikation und 20 durch die kriminologische Indikation. <br>
+          </p>
         </div>
       </div>
 
@@ -121,8 +132,14 @@
       </div>
       <div class="row section-content">
         <div class="col-sm-6">
-          <h2>Lorem ipsum dolor sit amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>
+            Die Anzahl der Geburten in Deutschland hat von 2011 bis 2016 
+             einen starken Anstieg vernommen. Von 2016 bis 2017 ist ein leichter Abfall der Geburten
+             in Deutschland zu verzeichnen. <br><br>
+             Die meisten Frauen bringen einen Jungen auf die Welt. Zum Beispiel kamen 2017 
+             402.510 Jungen und 382.374 Mädchen auf die Welt. Die meisten Babys werden dabei per Kaiserschnitt 
+             entbunden. 2017 brachten 232.505 Frauen ihre Babys durch einen Kaiserschnitt auf die Welt.
+          </p>
         </div>
         <div class="col-sm-6">
           <h6>Anzahl der Geburten in Deutschland von 2011 - 2017</h6>
@@ -232,8 +249,9 @@
         <div class="col-sm-12">
           <h2>Wann ist Ihr Geburtstermin?</h2>
           <p>
-            EinleitungEinleitungEinleitungEinleitungEinleitung
-            <br>EinleitungEinleitung Einleitung
+            Du bist schwanger und möchtest wissen wann dein Baby zur Welt kommt? Mit unserem Schwangerschaftsrechner
+            erfährst du ganz leicht wann der Geburtstermin ist und in welcher Schwangerschaftswoche 
+            du dich derzeit befindest.
           </p>
           <form class="row section-content" style="text-align: left;">
             <div class="form-group col-sm-3"></div>
@@ -302,12 +320,12 @@
 
 <script>
 import Chart1 from "@/Chart1.vue";
-import Chart2 from "@/Chart2.vue";
 import Chart3 from "@/Chart3.vue";
 import Chart4 from "@/Chart4.vue";
 import Chart5 from "@/Chart5.vue";
 import Chart6 from "@/Chart6.vue";
 import Chart7 from "@/Chart7.vue";
+import Text1 from "@/Text1.vue";
 
 export default {
   name: "app",
@@ -368,12 +386,12 @@ export default {
   },
   components: {
     Chart1,
-    Chart2,
     Chart3,
     Chart4,
     Chart5,
     Chart6,
-    Chart7
+    Chart7,
+    Text1
   }
 };
 
