@@ -247,11 +247,11 @@
       </div>
       <div class="row section-content" style="text-align: center;">
         <div class="col-sm-12">
-          <h2>Wann ist Ihr Geburtstermin?</h2>
+          <h2>Wann ist Dein Geburtstermin?</h2>
           <p>
-            Du bist schwanger und möchtest wissen wann dein Baby zur Welt kommt? 
+            Du bist schwanger und möchtest wissen wann Dein Baby zur Welt kommt? 
           <br> Mit unserem Schwangerschaftsrechner erfährst du ganz leicht wann der Geburtstermin ist und
-          <br> in welcher Schwangerschaftswoche du dich derzeit befindest.
+          <br> in welcher Schwangerschaftswoche Du dich derzeit befindest.
           </p>
           <form class="row section-content" style="text-align: left;">
             <div class="form-group col-sm-3"></div>
