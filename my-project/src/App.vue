@@ -181,7 +181,7 @@
         <h2>Weißt du's?</h2>
         <p>
           In Deutschland muss vor einem Schwangerschaftsabbruch eine Beratung in Anspruch genommen werden.
-          <br>Bis zu welcher Schwangerschaftswoche glauben Sie, können Sie straffrei abtreiben?
+          <br>Bis zu welcher Schwangerschaftswoche glaubst du, kannst du straffrei abtreiben?
         </p>
         <button
           id="1"
