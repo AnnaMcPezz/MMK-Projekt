@@ -544,6 +544,9 @@ h6 {
   width: 190px;
 }
 
+#StichtagButton:focus {
+  outline: none;
+}
 #MoreButton:focus {
   outline: none;
 }
