@@ -91,9 +91,9 @@
             etwas gestiegen. Die meisten Abbrüche werden dabei bis zur Beendigung der 11 Schwangerschaftswoche
             (SSW) vorgenommen.
             <br>
-            <br>2018 haben 97.2 Prozent der Frauen unter der 12 SSW
+            <br>2018 haben 97,2 Prozent der Frauen unter der 12 SSW
             einen Schwangerschaftsabbruch vorgenommen. Bei 2,1 Prozent der Frauen war die Schwangerschaft
-            schon von der 12. bis 21. SSW vorangeschreitet. Nur bei 0.6 Prozent der Frauen dauererte die Schwangerschaft
+            schon von der 12. bis 21. SSW vorangeschreitet. Nur bei 0,6 Prozent der Frauen dauererte die Schwangerschaft
             schon mehr als 21 SSW an.
             <br>
             <br>Die meisten Schwangerschaftsabbrüche finden nach der Beratungsregelung statt, selten wird ein Abbruch
@@ -249,9 +249,9 @@
         <div class="col-sm-12">
           <h2>Wann ist Dein Geburtstermin?</h2>
           <p>
-            Du bist schwanger und möchtest wissen wann Dein Baby zur Welt kommt? 
-          <br> Mit unserem Schwangerschaftsrechner erfährst du ganz leicht wann der Geburtstermin ist und
-          <br> in welcher Schwangerschaftswoche Du dich derzeit befindest.
+            Du bist schwanger und möchtest wissen wann dein Baby zur Welt kommt?
+            <br>Mit unserem Schwangerschaftsrechner erfährst du ganz leicht wann der Geburtstermin ist und
+            <br>in welcher Schwangerschaftswoche du dich derzeit befindest.
           </p>
           <form class="row section-content" style="text-align: left;">
             <div class="form-group col-sm-3"></div>
@@ -295,15 +295,11 @@
               <button id="StichtagButton" @click="CalculateBirth()">Stichtag berechnen</button>
               <br>
               <br>
-              <p>
-                <span>
-                  <b>Dein errechneter Geburtstermin ist am:</b>
-                  {{Termin}}
-                  <br>
-                  <b>Du befindest dich in Schwangerschaftswoche</b>
-                  {{Schwangerschaftswoche}}.
-                </span>
-              </p>
+              <div id="calc">Dein errechneter Geburtstermin ist am:</div>
+              <div id="answer">{{Termin}}</div>
+              <p></p>
+              <div id="calc">Du befindest dich in Schwangerschaftswoche:</div>
+              <div id="answer">{{Schwangerschaftswoche}}</div>
             </div>
           </div>
         </div>
@@ -399,7 +395,7 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
     document.getElementById("topButton").style.display = "block";
   } else {
     document.getElementById("topButton").style.display = "none";
@@ -453,6 +449,22 @@ h6 {
   font-weight: 300;
   text-align: center;
   color: rgb(100, 100, 100);
+}
+
+#calc {
+  font-size: 14pt;
+  font-weight: 600;
+  line-height: 25pt;
+  text-align: center;
+  color: rgb(100, 100, 100);
+}
+
+#answer {
+  font-size: 16pt;
+  font-weight: 300;
+  line-height: 18pt;
+  text-align: center;
+  color: #b404ae;
 }
 
 .project {
@@ -606,7 +618,7 @@ h6 {
 }
 
 #topButton:hover {
-  background-color: #555;
+  background-color: rgb(13, 151, 142);
 }
 
 button:disabled {
