@@ -294,13 +294,11 @@
             <div class="col-sm-12">
               <button id="StichtagButton" 
               @click="CalculateBirth()"
-              data-toggle="collapse"
-              data-target="#Rechner"
-              aria-expanded="false"
-              aria-controls="Rechner">Stichtag berechnen</button>
+              >Stichtag berechnen</button>
               <br>
               <br>
-              <div id="Rechner" class="collapse">Dein errechneter Geburtstermin ist am:
+              <div id="Rechner" 
+              >Dein errechneter Geburtstermin ist am:
                   <div id="answer">{{Termin}}</div>
                 <p></p>
                 <div> Du befindest dich in Schwangerschaftswoche:
@@ -310,9 +308,9 @@
                   <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im ersten Trimtester!</span>
                   INFOS
                 </p>
-                <p v-if="zweitesTrimester == true"> INFOS ZUM ZWEITEN TRIMESTER
+                <p v-if="zweitesTrimester == true"> 
                   <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im zweiten Trimtester!</span>
-                  INFOS
+                 INFOS ZUM ZWEITEN TRIMESTER
                 </p>
                 <p v-if="drittesTrimester == true">
                   <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im dritten Trimtester!</span>
@@ -371,17 +369,15 @@ export default {
       erstesTrimester: false,
       zweitesTrimester: false,
       drittesTrimester: false,
+
     };
   },
   methods: {
-    ShowChart() {
-      this.pChartActive = true;
-      this.pChartInactive = false;
-    },
 
     CalculateBirth() {
     this.todayDate = new Date();
     this.Periode = new Date(this.Datum);
+    this.isComplete = true;
 
     this.x = document.forms["Schwangerschaftsrechner"].elements;
     for (var i = 0; i < this.x.length; i++) {
@@ -408,17 +404,18 @@ export default {
       this.Schwangerschaftswoche = Math.round(
         (this.todayDate - this.PeriodeInSeconds) / 604800000
       );
-    }
-   if (this.Schwangerschaftswoche <= 12){
-     this.erstesTrimester = true;
-   } else if (this.Schwangerschaftswoche <= 28){
-     this.zweitesTrimester = true;
-     this.erstesTrimester = false;
-   } else {
-     this.drittesTrimester = true;
-     this.erstesTrimester = false; 
-     this.zweitesTrimester = false; 
+    if (this.Schwangerschaftswoche <= 12){
+      this.erstesTrimester = true;
+     } else if (this.Schwangerschaftswoche <= 28){
+      this.zweitesTrimester = true;
+      this.erstesTrimester = false;
+      } else {
+      this.drittesTrimester = true;
+      this.erstesTrimester = false; 
+      this.zweitesTrimester = false; 
       }
+    }
+  
     },
     answer(answer) {
       if (answer == false) {
@@ -676,6 +673,13 @@ button:disabled {
 
 #RightAnswer:disabled {
   background-color: rgb(19, 216, 203);
+}
+
+#ErgebnisAnzeigen{
+  display: block;
+}
+#ErgebnisNichtAnzeigen{
+  display: none;
 }
 </style>
 
