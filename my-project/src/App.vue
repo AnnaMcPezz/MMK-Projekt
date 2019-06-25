@@ -292,14 +292,32 @@
           </form>
           <div>
             <div class="col-sm-12">
-              <button id="StichtagButton" @click="CalculateBirth()">Stichtag berechnen</button>
+              <button id="StichtagButton" 
+              @click="CalculateBirth()"
+              data-toggle="collapse"
+              data-target="#Rechner"
+              aria-expanded="false"
+              aria-controls="Rechner">Stichtag berechnen</button>
               <br>
               <br>
-              <div id="calc">Dein errechneter Geburtstermin ist am:</div>
-              <div id="answer">{{Termin}}</div>
-              <p></p>
-              <div id="calc">Du befindest dich in Schwangerschaftswoche:</div>
-              <div id="answer">{{Schwangerschaftswoche}}</div>
+              <div id="Rechner" class="collapse">Dein errechneter Geburtstermin ist am:
+                  <div id="answer">{{Termin}}</div>
+                <p></p>
+                <div> Du befindest dich in Schwangerschaftswoche:
+                  <div id="answer">{{Schwangerschaftswoche}}</div>
+                </div>
+                <p v-if="erstesTrimester == true"> 
+                  <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im ersten Trimtester!</span>
+                  INFOS
+                </p>
+                <p v-if="zweitesTrimester == true"> INFOS ZUM ZWEITEN TRIMESTER
+                  <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im zweiten Trimtester!</span>
+                  INFOS
+                </p>
+                <p v-if="drittesTrimester == true">
+                  <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im dritten Trimtester!</span>
+                   INFOS ZUM DRITTEN TRIMESTER</p>
+              </div>
             </div>
           </div>
         </div>
@@ -350,6 +368,9 @@ export default {
       todayDate: "",
       isComplete: true,
       x: "",
+      erstesTrimester: false,
+      zweitesTrimester: false,
+      drittesTrimester: false,
     };
   },
   methods: {
@@ -359,6 +380,9 @@ export default {
     },
 
     CalculateBirth() {
+    this.todayDate = new Date();
+    this.Periode = new Date(this.Datum);
+
     this.x = document.forms["Schwangerschaftsrechner"].elements;
     for (var i = 0; i < this.x.length; i++) {
             if (this.x[i].value.length == "") this.isComplete = false;
@@ -367,10 +391,12 @@ export default {
     if (this.isComplete == false){
       alert("Bitte fülle alle Felder aus!")
     } 
+
+    if (this.Periode > this.todayDate){
+      alert ("Das angebene Datum muss vor dem heutigen Datum liegen!")
+    } 
     
-    if (this.isComplete == true){
-      this.Periode = new Date(this.Datum);
-      this.todayDate = new Date();
+    if (this.isComplete == true && (this.Periode < this.todayDate)){
       this.PeriodeInSeconds = this.Periode.getTime();
       this.Geburtstermin =
         this.PeriodeInSeconds +
@@ -383,6 +409,16 @@ export default {
         (this.todayDate - this.PeriodeInSeconds) / 604800000
       );
     }
+   if (this.Schwangerschaftswoche <= 12){
+     this.erstesTrimester = true;
+   } else if (this.Schwangerschaftswoche <= 28){
+     this.zweitesTrimester = true;
+     this.erstesTrimester = false;
+   } else {
+     this.drittesTrimester = true;
+     this.erstesTrimester = false; 
+     this.zweitesTrimester = false; 
+      }
     },
     answer(answer) {
       if (answer == false) {
