@@ -253,7 +253,7 @@
             <br>Mit unserem Schwangerschaftsrechner erfährst du ganz leicht wann der Geburtstermin ist und
             <br>in welcher Schwangerschaftswoche du dich derzeit befindest.
           </p>
-          <form class="row section-content" style="text-align: left;">
+          <form class="row section-content" style="text-align: left;" name="Schwangerschaftsrechner">
             <div class="form-group col-sm-3"></div>
 
             <div class="form-group col-sm-3">
@@ -347,7 +347,9 @@ export default {
       Geburtstermin: "",
       Termin: "",
       Schwangerschaftswoche: "",
-      todayDate: ""
+      todayDate: "",
+      isComplete: true,
+      x: "",
     };
   },
   methods: {
@@ -357,6 +359,16 @@ export default {
     },
 
     CalculateBirth() {
+    this.x = document.forms["Schwangerschaftsrechner"].elements;
+    for (var i = 0; i < this.x.length; i++) {
+            if (this.x[i].value.length == "") this.isComplete = false;
+        }
+
+    if (this.isComplete == false){
+      alert("Bitte fülle alle Felder aus!")
+    } 
+    
+    if (this.isComplete == true){
       this.Periode = new Date(this.Datum);
       this.todayDate = new Date();
       this.PeriodeInSeconds = this.Periode.getTime();
@@ -366,10 +378,11 @@ export default {
         3 * 2628000000 +
         31536000000 +
         (this.Zyklus - 28) * 86400000;
-      this.Termin = new Date(this.Geburtstermin);
+      this.Termin = new Date(this.Geburtstermin).toLocaleDateString();
       this.Schwangerschaftswoche = Math.round(
         (this.todayDate - this.PeriodeInSeconds) / 604800000
       );
+    }
     },
     answer(answer) {
       if (answer == false) {
