@@ -305,8 +305,23 @@
                   <div id="answer">{{Schwangerschaftswoche}}</div>
                 </div>
                 <p v-if="erstesTrimester == true"> 
-                  <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im ersten Trimtester!</span>
-                  INFOS
+                  <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im ersten Trimtester!</span> <br><br>
+                   <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">So entwickelt sich dein Baby!</span> <br>
+                   Während des ersten Trimesters entsteht aus der Eizelle ein kleines Baby,
+                  welches etwa sechs bis acht Zentimeter groß ist. <br>In der Mitte des Trimesters 
+                  fängt bei dem Baby die Organentwicklung an. Es entstehen zum Beispiel das Herz,
+                  die Blutgefäßsysteme und das Bindegewebe.<br> Das Herz des Babys pocht anfangs noch 
+                  etwas träge, wird aber schon bald auf flotte 100 bis 120 Schläge pro Minute beschleunigen. <br>
+                  Im letzten Drittel des ersten Trimesters sind auch langsam Gliedmaße wie Arme und Beine zu erkennen. <br><br>
+                <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">Das passiert mit dir! </span><br>
+                  Während des ersten Trimesters fangen Du und dein Körper an sich langsam zu verändern.
+                  Deine Eizelle wird befruchtet und nistet sich in<br> deiner Gebärmutter ein. 
+                  Ebenso wird die Plazenta gebildet, welche für dein Kind überlebensnotwenig ist, 
+                  da das Baby über die Plazenta versorgt wird.<br> Deine Hormone stellen sich auch um, 
+                  da sich dein Körper auf eine Schwangerschaft vorbereitet. <br>Symptome wie das ausbleiben 
+                  der Periode wirst du erst ab der zweiten Hälfte des ersten Trimesters mitbekommen. <br>
+                  Ebenso kann es sein, dass du von Übelkeit oder Müdigkeit während des ersten Trimesters 
+                  begleitet wirst. <br>Ab dem zweiten Trimester wird es besser.
                 </p>
                 <p v-if="zweitesTrimester == true"> 
                   <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im zweiten Trimtester!</span>
@@ -344,7 +359,6 @@ import Chart4 from "@/Chart4.vue";
 import Chart5 from "@/Chart5.vue";
 import Chart6 from "@/Chart6.vue";
 import Chart7 from "@/Chart7.vue";
-import Text1 from "@/Text1.vue";
 
 export default {
   name: "app",
@@ -431,8 +445,7 @@ export default {
     Chart4,
     Chart5,
     Chart6,
-    Chart7,
-    Text1
+    Chart7
   }
 };
 
