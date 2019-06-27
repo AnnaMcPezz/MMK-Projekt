@@ -297,13 +297,12 @@
               >Stichtag berechnen</button>
               <br>
               <br>
-              <div id="Rechner" 
-              >Dein errechneter Geburtstermin ist am:
-                  <div id="answer">{{Termin}}</div>
+              <div id="Rechner" >
+                Dein errechneter Geburtstermin ist am:
+                <div id="answer">{{Termin}}</div>
                 <p></p>
-                <div> Du befindest dich in Schwangerschaftswoche:
-                  <div id="answer">{{Schwangerschaftswoche}}</div>
-                </div>
+                Du befindest dich in Schwangerschaftswoche:
+                <div id="answer">{{Schwangerschaftswoche}}</div>
                 <p v-if="erstesTrimester == true"> 
                   <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im ersten Trimtester!</span> <br><br>
                    <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">So entwickelt sich dein Baby!</span> <br>
