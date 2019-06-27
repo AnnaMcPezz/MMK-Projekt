@@ -117,7 +117,7 @@
       <div class="collapse" id="Abbrueche">
         <div class="row section-content">
           <div class="col-sm-6">
-            <h6>Schwangerschaftsabbrüche nach Dauer der Schwangerschaft von 2018</h6>
+            <h6>Schwangerschaftsabbrüche nach Dauer der Schwangerschaft in Wochen von 2018</h6>
             <Chart6></Chart6>
           </div>
           <div class="col-sm-6">
