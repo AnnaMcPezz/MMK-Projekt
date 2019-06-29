@@ -58,7 +58,7 @@
               >Stichtag berechnen</button>
               <br>
               <br>
-              <div id="Rechner" v-bind:class="{ ErgebnisAnzeigen: isActive, ErgebnisNichtAnzeigen: isNotActive }">
+              <div id="Rechner" v-bind:class="{ active: isActive, inactive: isNotActive }">
                 Dein errechneter Geburtstermin ist am:
                 <div id="answer">{{Termin}}</div>
                 <p></p>
@@ -238,21 +238,6 @@ body {
   line-height: 18pt;
 }
 
-.nav {
-  font-size: 11pt;
-  padding-right: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.nav a {
-  color: white;
-  margin: auto;
-}
-
-.nav a:hover {
-  color: rgb(19, 216, 203);
-}
 
 h1 {
   font-size: 22pt;
@@ -275,24 +260,12 @@ h6 {
   color: rgb(100, 100, 100);
 }
 
-ul {
-  list-style: none;
-}
-
 #calc {
   font-size: 14pt;
   font-weight: 600;
   line-height: 25pt;
   text-align: center;
   color: rgb(100, 100, 100);
-}
-
-#answer {
-  font-size: 16pt;
-  font-weight: 300;
-  line-height: 18pt;
-  text-align: center;
-  color: #b404ae;
 }
 
 .project {
@@ -311,18 +284,6 @@ ul {
   background-color: rgb(19, 216, 203);
 }
 
-#frage {
-  width: 15%;
-}
-
-.questionBox {
-  background-color: white;
-  padding: 30px;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 5px 5px 15px rgb(66, 66, 66);
-}
-
 .content {
   padding-bottom: 50px;
   padding-top: 50px;
@@ -336,32 +297,12 @@ ul {
   margin: 0 auto;
   margin-top: 15px;
 }
-.footer {
-  font-size: 8pt;
-  color: rgb(100, 100, 100);
-  text-align: center;
-  padding-top: 20px;
-}
 
 .active {
   display: block;
 }
 .inactive {
   display: none;
-}
-
-#MoreCharts {
-  text-align: center;
-}
-
-#MoreButton {
-  border: none;
-  background-color: rgb(19, 216, 203);
-  border-radius: 5px;
-  font-size: 18px;
-  color: white;
-  height: 35px;
-  width: 250px;
 }
 
 #StichtagButton {
@@ -387,80 +328,5 @@ ul {
 #StichtagButton:focus {
   outline: none;
 }
-#MoreButton:focus {
-  outline: none;
-}
 
-.qButton {
-  border: none;
-  background-color: #343a40;
-  border-radius: 5px;
-  font-size: 18px;
-  color: white;
-  height: 35px;
-  width: 190px;
-  margin-right: 40px;
-  margin-top: 10px;
-}
-
-.qButton:focus {
-  outline: none;
-}
-
-.qButton:hover {
-  border: none;
-  background-color: #b404ae;
-  border-radius: 5px;
-  font-size: 18px;
-  color: white;
-  height: 35px;
-  width: 190px;
-  margin-right: 40px;
-}
-
-#MoreButton:hover {
-  border: none;
-  background-color: rgb(13, 151, 142);
-  border-radius: 5px;
-  font-size: 18px;
-  color: white;
-  height: 35px;
-  width: 250px;
-}
-
-#topButton {
-  text-decoration: none;
-  display: inline-block;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: rgb(19, 216, 203);
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 30px;
-  font-size: 18px;
-}
-
-#topButton:hover {
-  background-color: rgb(13, 151, 142);
-}
-
-button:disabled {
-  background-color: #b404ae;
-}
-
-#RightAnswer:disabled {
-  background-color: rgb(19, 216, 203);
-}
-
-.ErgebnisAnzeigen{
-  display: block;
-}
-.ErgebnisNichtAnzeigen{
-  display: none;
-}
 </style>
