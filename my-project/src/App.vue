@@ -297,7 +297,7 @@
               >Stichtag berechnen</button>
               <br>
               <br>
-              <div id="Rechner" >
+              <div id="Rechner" v-bind:class="{ ErgebnisAnzeigen: isActive, ErgebnisNichtAnzeigen: isNotActive }">
                 Dein errechneter Geburtstermin ist am:
                 <div id="answer">{{Termin}}</div>
                 <p></p>
@@ -382,6 +382,8 @@ export default {
       erstesTrimester: false,
       zweitesTrimester: false,
       drittesTrimester: false,
+      isActive: false,
+      isNotActive: true,
 
     };
   },
@@ -427,6 +429,8 @@ export default {
       this.erstesTrimester = false; 
       this.zweitesTrimester = false; 
       }
+      this.isNotActive = false; 
+      this.isActive = true;
     }
   
     },
@@ -687,10 +691,10 @@ button:disabled {
   background-color: rgb(19, 216, 203);
 }
 
-#ErgebnisAnzeigen{
+.ErgebnisAnzeigen{
   display: block;
 }
-#ErgebnisNichtAnzeigen{
+.ErgebnisNichtAnzeigen{
   display: none;
 }
 </style>
