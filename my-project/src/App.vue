@@ -305,14 +305,14 @@
                 <div id="answer">{{Schwangerschaftswoche}}</div>
                 <p v-if="erstesTrimester == true"> 
                   <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im ersten Trimtester!</span> <br><br>
-                   <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">So entwickelt sich dein Baby!</span> <br>
-                   Während des ersten Trimesters entsteht aus der Eizelle ein kleines Baby,
+                  <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">So entwickelt sich dein Baby!</span> <br>
+                  Während des ersten Trimesters entsteht aus der Eizelle ein kleines Baby,
                   welches etwa sechs bis acht Zentimeter groß ist. <br>In der Mitte des Trimesters 
                   fängt bei dem Baby die Organentwicklung an. Es entstehen zum Beispiel das Herz,
                   die Blutgefäßsysteme und das Bindegewebe.<br> Das Herz des Babys pocht anfangs noch 
                   etwas träge, wird aber schon bald auf flotte 100 bis 120 Schläge pro Minute beschleunigen. <br>
                   Im letzten Drittel des ersten Trimesters sind auch langsam Gliedmaße wie Arme und Beine zu erkennen. <br><br>
-                <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">Das passiert mit dir! </span><br>
+                  <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">Das passiert mit dir! </span><br>
                   Während des ersten Trimesters fangen Du und dein Körper an sich langsam zu verändern.
                   Deine Eizelle wird befruchtet und nistet sich in<br> deiner Gebärmutter ein. 
                   Ebenso wird die Plazenta gebildet, welche für dein Kind überlebensnotwenig ist, 
@@ -323,12 +323,44 @@
                   begleitet wirst. <br>Ab dem zweiten Trimester wird es besser.
                 </p>
                 <p v-if="zweitesTrimester == true"> 
-                  <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im zweiten Trimtester!</span>
-                 INFOS ZUM ZWEITEN TRIMESTER
+                  <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im zweiten Trimtester!</span><br><br>
+                  <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">So entwickelt sich dein Baby!</span> <br>
+                  Mit Beginn des zweiten Trimesters lässt sich das Geschlecht deines Babys schon deutlich erkennen. <br>
+                  Seine inneren Organe sind vollständig ausgebildet und müssen lediglich noch weiter reifen. <br>
+                  Dein Baby wird nun häufiger an seinen Daumen lutschen und hat wie du Schlaf- und Wachphasen.<br> 
+                  Gegen Ende des zweiten Trimesters kann dein Baby bereits hören, sehen und tasten. <br>
+                  Ebenso hat es auch die ersten Haare auf dem Kopf. In der letzten Schwangerschaftswoche <br>
+                  des Trimesters ist dein Baby auf rund 34 Zentimeter gewachsen und wiegt rund 1.000 Gramm.
+                  <br><br>
+                  <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">Das passiert mit dir! </span><br>
+                  Mit Beginn des zweiten Trimesters verschwinden endlich Beschwerden wie Übelkeit, <br>
+                  Stimmungsschwankungen und starke Müdigkeit. Deswegen wird das zweite Trimester meistens <br>
+                  als angenehmste Phase der Schwangerschaft wahrgenommen. Ab der 13. Schwangerschaftswoche <br>
+                  kannst du erstmals einen kleinen Babybauch wahrnehmen. Damit der wachsende Bauch <br>
+                  genügend Platz hat, solltest du dir ab der 20 Schwangerschaftswoche schicke und <br>
+                  bequeme Umstandskleidung zu legen. Gegen Ende des zweiten Trimesters machen sich bei <br>
+                  dir langsam Schwangerschaftsbeschwerden, wie Rückenschmerzen, Sodbrenne, <br>
+                  Wadenkrämpfe und erste Übungswehen bemerkbar.<br><br>
+                  <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">2. Screening und wichtige Tests</span><br>
+                  Hier ein kleiner Überblick über wichtige Tests, welche du im zweiten Trimester machen lassen solltest:<br>
+                  <ul>
+                    <li><b>Fruchtwasseruntersuchung (16. bis 20. SSW):</b> Wird Schwangeren ab 35 Jahre empfohlen. <br>
+                        Die Fruchtwasseruntersuchung kann Hinweise auf einen offenen Rücken <br>oder das Down-Syndrom geben.</li>
+                    <li><b>2. Screening (19. bis 22. SSW):</b> Bei der zweiten Ultraschalluntersuchung werden das <br>
+                        Herz und weitere Organe des Fötus sowie die altersgerechte Entwicklung <br>und die Kindsbewegung 
+                        kontrolliert. Ebenso kann beim 2. Screening <br>das Geschlecht des Babys erkennen.</li>
+                    <li><b>Glucosetoleranz-Test (24. bis 28. SSW): </b>Eine Schwangerschafts-Diabetes kann mit<br>
+                        dem sogenannten Zuckerbelastungstest rechtzeitig erkannt und behandelt<br> werden. 
+                        Bestehen bei einer Schwangeren Risikofaktoren, wie erhöhter<br> Blutdruck, Übergewicht 
+                        oder Fälle von Diabetes Mellitus in der Familie, <br>wird der Test vor der 24. SSW durchgeführt.</li>
+                  </ul>
                 </p>
                 <p v-if="drittesTrimester == true">
-                  <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im dritten Trimtester!</span>
-                   INFOS ZUM DRITTEN TRIMESTER</p>
+                  <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im dritten Trimtester!</span><br><br>
+                  <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">So entwickelt sich dein Baby!</span> <br>
+                  <br><br>
+                  <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">Das passiert mit dir! </span><br>
+                </p>
               </div>
             </div>
           </div>
@@ -515,6 +547,10 @@ h6 {
   font-weight: 300;
   text-align: center;
   color: rgb(100, 100, 100);
+}
+
+ul {
+  list-style: none;
 }
 
 #calc {
