@@ -358,8 +358,23 @@
                 <p v-if="drittesTrimester == true">
                   <span style="color:rgb(100,100,100); font-weight: 600;">Du befindest dich im dritten Trimtester!</span><br><br>
                   <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">So entwickelt sich dein Baby!</span> <br>
+                  Zu Beginn des dritten Trimesters ist dein Baby knapp 30 Zentimeter groß und wiegt rund 1.500 Gramm.<br> 
+                  Die Entwicklung seines Gehirns, seines Nervensystems und seiner Organe ist mir Beginn des achten <br>
+                  Monats zum größten Teil abgeschlossen. In den letzten Wochen der s Schwangerschaft steht das <br>
+                  Längenwachstum und die Gewichtszunahme des Ungeborenen im Fokus. Aufgrund des Platzmangels rollst <br>
+                  sich dein Baby häufig in die Embryostellung ein. Es kann auch vorkommen, dass dein Baby seinen Kopf <br>
+                  ab der 29. SSW in dein Becken senkt. Sollte dein Kind schon ab der 37. SSW zur Welt kommen, <br>
+                  kannst du ganz beruhigt bleiben, denn es ist zu diesem Zeitpunkt kein Frühchen mehr.
                   <br><br>
                   <span style="color: #b404ae; font-weight: 400; font-size: 12pt;">Das passiert mit dir! </span><br>
+                  Das dritte und letzte Trimester kann für dich nochmal sehr anstrengend werden, da sich der obere <br>
+                  Rand des Uterus in der 30. SSW bis zum Zwerchfell ausgedehnt hat. Die Größe und das Gewicht <br>
+                  deines Babys können bei dir zu Kreislaufbeschwerden, Rückenschmerzen, Kurzatmigkeit, Sodbrennen <br>
+                  und Magen-Darm-Problemen führen. Zum Ende der Schwangerschaft können bei dir auch Wassereinlagerungen <br>
+                  in den Füßen und Händen vorkommen. Das Hochlegen der Beine kann die Beschwerden lindern. Sechs Wochen <br>
+                  vor dem ermittelten Geburtstermin beginnt für dich der Mutterschutz. Diese Zeit solltest du vor allem <br>
+                  zum Entspannung nutzen. Ab der 36. SSW können bei dir Senkwehen auftreten, welche das Absinken des <br>
+                  Kopfes in dein Becken begleiten. Auch die Übungswehen nehmen im dritten Trimester nochmal deutlich zu.
                 </p>
               </div>
             </div>
