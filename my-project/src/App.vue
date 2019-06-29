@@ -419,6 +419,10 @@ export default {
       this.Schwangerschaftswoche = Math.round(
         (this.todayDate - this.PeriodeInSeconds) / 604800000
       );
+    if (this.Schwangerschaftswoche >40){
+      alert ("Der letzte Tag der Periode darf nicht mehr als 40 Wochen zurück liegen!");
+      return;
+    }
     if (this.Schwangerschaftswoche <= 12){
       this.erstesTrimester = true;
      } else if (this.Schwangerschaftswoche <= 28){
@@ -428,7 +432,7 @@ export default {
       this.drittesTrimester = true;
       this.erstesTrimester = false; 
       this.zweitesTrimester = false; 
-      }
+      } 
       this.isNotActive = false; 
       this.isActive = true;
     }
